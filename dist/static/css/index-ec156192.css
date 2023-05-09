@@ -451,9 +451,12 @@ a:hover {
 }
 @font-face {
   font-family: iconfont;
-  src: url(../woff2/iconfont-42712917.woff2?t=1681790330003) format("woff2"),
-    url(../woff/iconfont-91dbdda3.woff?t=1681790330003) format("woff"),
-    url(../ttf/iconfont-bbc15806.ttf?t=1681790330003) format("truetype");
+  src: url(/wy-vue3-vite-basic/static/woff2/iconfont-42712917.woff2?t=1681790330003)
+      format("woff2"),
+    url(/wy-vue3-vite-basic/static/woff/iconfont-91dbdda3.woff?t=1681790330003)
+      format("woff"),
+    url(/wy-vue3-vite-basic/static/ttf/iconfont-bbc15806.ttf?t=1681790330003)
+      format("truetype");
 }
 .iconfont {
   font-size: 16px;

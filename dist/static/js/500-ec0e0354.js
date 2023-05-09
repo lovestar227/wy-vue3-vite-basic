@@ -9,7 +9,7 @@ import {
   L as r,
   a0 as p
 } from "./.pnpm-4a45e2d5.js";
-import { _ as l } from "./index-02f47d16.js";
+import { _ as l } from "./index-607170c1.js";
 const m = { class: "page-500" },
   f = { class: "middle-box" },
   v = { class: "icon-500" },

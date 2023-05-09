@@ -4,7 +4,7 @@ import {
   v as S,
   x as V,
   y as Y,
-  A as me,
+  A as he,
   B as d,
   h as l,
   w as r,
@@ -17,7 +17,7 @@ import {
   F as f,
   G as Ie,
   H as P,
-  u as he,
+  u as me,
   I as J,
   J as K,
   L as x,
@@ -25,7 +25,7 @@ import {
   P as k,
   Q as E,
   R as B,
-  S as G,
+  S as U,
   T as oe,
   U as _e,
   V as Le,
@@ -49,8 +49,8 @@ import {
   u as ye,
   m as Ne,
   $ as F
-} from "./index-02f47d16.js";
-import { t as Ve, _ as Ae } from "./theme-ec27e5b4.js";
+} from "./index-607170c1.js";
+import { t as Ve, _ as Ae } from "./theme-a5f17e47.js";
 import { _ as se } from "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js";
 import { _ as ae } from "./WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js";
 import { h as ue, a as de, r as pe } from "./index-3c161a70.js";
@@ -130,7 +130,7 @@ const Q = Te({
         s = V(null),
         _ = Y();
       return (
-        me(
+        he(
           () => _,
           (u, c) => {
             var g;
@@ -143,13 +143,13 @@ const Q = Te({
         ),
         (u, c) => {
           const g = w("el-backtop"),
-            h = w("el-scrollbar"),
+            m = w("el-scrollbar"),
             C = w("router-view");
           return (
             o(),
             d("div", qe, [
               l(C, null, {
-                default: r(({ Component: m, route: b }) => {
+                default: r(({ Component: h, route: b }) => {
                   var T;
                   return [
                     (T = b.meta) != null && T.fixedPage
@@ -161,7 +161,7 @@ const Q = Te({
                             { include: n(a) },
                             [
                               (o(),
-                              y(re(m), {
+                              y(re(h), {
                                 key: b.fullPath,
                                 class: "main-content"
                               }))
@@ -172,7 +172,7 @@ const Q = Te({
                         ]))
                       : (o(),
                         y(
-                          h,
+                          m,
                           { key: 0, ref_key: "mainViewScrollBarRef", ref: s },
                           {
                             default: r(() => [
@@ -186,7 +186,7 @@ const Q = Te({
                                 { include: n(a) },
                                 [
                                   (o(),
-                                  y(re(m), {
+                                  y(re(h), {
                                     key: b.fullPath,
                                     class: "main-content"
                                   }))
@@ -209,14 +209,14 @@ const Q = Te({
       );
     }
   });
-const Ue = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
-  Xe = {
+const Xe = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
+  Ze = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
     width: "1.2em",
     height: "1.2em"
   },
-  Ze = f(
+  je = f(
     "path",
     {
       fill: "currentColor",
@@ -225,7 +225,7 @@ const Ue = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
     null,
     -1
   ),
-  je = f(
+  Ge = f(
     "path",
     {
       fill: "currentColor",
@@ -234,9 +234,9 @@ const Ue = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
     null,
     -1
   ),
-  Ge = [Ze, je];
+  Ue = [je, Ge];
 function Ye(t, e) {
-  return o(), d("svg", Xe, Ge);
+  return o(), d("svg", Ze, Ue);
 }
 const Qe = { name: "ep-back", render: Ye },
   et = {
@@ -259,7 +259,7 @@ function nt(t, e) {
   return o(), d("svg", et, ot);
 }
 const st = { name: "ep-check", render: nt },
-  ge = "" + new URL("../jpg/user-7f3f121e.jpg", import.meta.url).href;
+  ge = "/wy-vue3-vite-basic/static/jpg/user-7f3f121e.jpg";
 function we() {
   const { locale: t, t: e } = Ie(),
     a = ne();
@@ -341,7 +341,7 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
   ut = v({
     ..._t,
     setup(t) {
-      const e = he(),
+      const e = me(),
         a = S(() => {
           var _, u;
           return (u = (_ = e.currentRoute.value) == null ? void 0 : _.meta) ==
@@ -373,11 +373,11 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
                     null,
                     K(
                       n(a),
-                      (h, C) => (
+                      (m, C) => (
                         o(),
                         y(
                           c,
-                          { key: h.path },
+                          { key: m.path },
                           {
                             default: r(() => [
                               C != n(a).length - 1
@@ -386,14 +386,14 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
                                     "span",
                                     {
                                       key: 0,
-                                      onClick: m => s(h),
+                                      onClick: h => s(m),
                                       class: "can-redirect"
                                     },
-                                    x(_.$t(h.title)),
+                                    x(_.$t(m.title)),
                                     9,
                                     it
                                   ))
-                                : (o(), d("span", rt, x(_.$t(h.title)), 1))
+                                : (o(), d("span", rt, x(_.$t(m.title)), 1))
                             ]),
                             _: 2
                           },
@@ -415,7 +415,7 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
 const dt = I(ut, [["__scopeId", "data-v-ece15a80"]]),
   pt = { class: "screen-full-box" },
   gt = v({ name: "ScreenFull" }),
-  mt = v({
+  ht = v({
     ...gt,
     setup(t) {
       const { isFullscreen: e, toggle: a } = Be();
@@ -442,7 +442,7 @@ const dt = I(ut, [["__scopeId", "data-v-ece15a80"]]),
       };
     }
   });
-const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
+const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
   ft = { class: "navbar" },
   vt = { class: "vertical-header-right" },
   yt = { class: "user-box" },
@@ -463,7 +463,7 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
           background: L === A ? Ve().themeColor.mainColor : "",
           color: L === A ? "#fff" : "#000"
         })),
-        { locale: h, translateZh: C, translateEn: m } = we(),
+        { locale: m, translateZh: C, translateEn: h } = we(),
         { isCollapse: b, toggleSideBar: T } = le(),
         ee = {
           display: "inline-flex",
@@ -473,11 +473,11 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
           "align-items": "center"
         };
       return (L, A) => {
-        const U = se,
-          X = st,
+        const X = se,
+          Z = st,
           q = w("el-dropdown-item"),
-          Z = w("el-dropdown-menu"),
-          j = w("el-dropdown"),
+          j = w("el-dropdown-menu"),
+          G = w("el-dropdown"),
           i = Ae,
           p = Qe;
         return (
@@ -495,35 +495,35 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
               : k("", !0),
             l(dt),
             f("div", vt, [
-              n(a) ? (o(), y(ht, { key: 0 })) : k("", !0),
+              n(a) ? (o(), y(mt, { key: 0 })) : k("", !0),
               l(
-                j,
+                G,
                 { trigger: "click", class: "toogle-locale" },
                 {
                   dropdown: r(() => [
                     l(
-                      Z,
+                      j,
                       { class: "translate" },
                       {
                         default: r(() => [
                           l(
                             q,
                             {
-                              style: E(n(g)(n(h), "zh-CN")),
+                              style: E(n(g)(n(m), "zh-CN")),
                               class: "transition-dropdown-item",
                               onClick: n(C)
                             },
                             {
                               default: r(() => [
                                 B(" 简体中文 "),
-                                G(
+                                U(
                                   l(
-                                    X,
+                                    Z,
                                     { style: { "margin-left": "10px" } },
                                     null,
                                     512
                                   ),
-                                  [[oe, n(h) === "zh-CN"]]
+                                  [[oe, n(m) === "zh-CN"]]
                                 )
                               ]),
                               _: 1
@@ -534,21 +534,21 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
                           l(
                             q,
                             {
-                              style: E(n(g)(n(h), "en")),
+                              style: E(n(g)(n(m), "en")),
                               class: "transition-dropdown-item",
-                              onClick: n(m)
+                              onClick: n(h)
                             },
                             {
                               default: r(() => [
                                 B(" English "),
-                                G(
+                                U(
                                   l(
-                                    X,
+                                    Z,
                                     { style: { "margin-left": "10px" } },
                                     null,
                                     512
                                   ),
-                                  [[oe, n(h) === "en"]]
+                                  [[oe, n(m) === "en"]]
                                 )
                               ]),
                               _: 1
@@ -563,17 +563,17 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
                   ]),
                   default: r(() => [
                     f("span", null, [
-                      n(h) === "en"
+                      n(m) === "en"
                         ? (o(),
-                          y(U, {
+                          y(X, {
                             key: 0,
                             icon: "icon-zhongyingwenqiehuan-yingwen",
                             class: "toogle-locale-icon"
                           }))
                         : k("", !0),
-                      n(h) === "zh-CN"
+                      n(m) === "zh-CN"
                         ? (o(),
-                          y(U, {
+                          y(X, {
                             key: 1,
                             icon: "icon-zhongyingwenqiehuan-zhongwen",
                             class: "toogle-locale-icon"
@@ -586,12 +586,12 @@ const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
               ),
               n(s) ? (o(), y(i, { key: 1 })) : k("", !0),
               l(
-                j,
+                G,
                 { trigger: "click" },
                 {
                   dropdown: r(() => [
                     l(
-                      Z,
+                      j,
                       { class: "logout" },
                       {
                         default: r(() => [
@@ -663,11 +663,11 @@ const xt = I(kt, [["__scopeId", "data-v-285397a3"]]),
           });
       }
       return (c, g) => {
-        const h = w("el-tooltip");
+        const m = w("el-tooltip");
         return (
           o(),
           y(
-            h,
+            m,
             { placement: "top", offset: -10, disabled: s.value },
             {
               content: r(() => [
@@ -780,7 +780,7 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
         const u = ae,
           c = $e,
           g = w("el-menu-item"),
-          h = w("side-bar-item", !0),
+          m = w("side-bar-item", !0),
           C = w("el-sub-menu");
         return !e.item.children || e.item.children.length == 0
           ? (o(),
@@ -800,9 +800,9 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
                   ])
                 ]),
                 default: r(() => {
-                  var m, b;
+                  var h, b;
                   return [
-                    (m = e.item.meta) != null && m.icon
+                    (h = e.item.meta) != null && h.icon
                       ? (o(),
                         d("div", Lt, [
                           l(
@@ -829,9 +829,9 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
               { key: 1, index: e.item.path, "popper-class": "side-bar-popper" },
               {
                 title: r(() => {
-                  var m, b;
+                  var h, b;
                   return [
-                    (m = e.item.meta) != null && m.icon
+                    (h = e.item.meta) != null && h.icon
                       ? (o(),
                         d("div", Rt, [
                           l(
@@ -861,8 +861,8 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
                     null,
                     K(
                       e.item.children,
-                      m => (
-                        o(), y(h, { key: m.path, item: m }, null, 8, ["item"])
+                      h => (
+                        o(), y(m, { key: h.path, item: h }, null, 8, ["item"])
                       )
                     ),
                     128
@@ -890,7 +890,7 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
         { isCollapse: s, toggleSideBar: _ } = le(),
         u = c => {};
       return (c, g) => {
-        const h = w("el-menu"),
+        const m = w("el-menu"),
           C = w("el-scrollbar");
         return (
           o(),
@@ -900,7 +900,7 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
               l(C, null, {
                 default: r(() => [
                   l(
-                    h,
+                    m,
                     {
                       router: "",
                       "unique-opened": "",
@@ -909,7 +909,7 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
                       collapse: n(s),
                       "default-active": n(e).path,
                       "collapse-transition": !1,
-                      onSelect: g[0] || (g[0] = m => u(m))
+                      onSelect: g[0] || (g[0] = h => u(h))
                     },
                     {
                       default: r(() => [
@@ -919,9 +919,9 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
                           null,
                           K(
                             n(Ne),
-                            m => (
+                            h => (
                               o(),
-                              y(Dt, { key: m.path, item: m }, null, 8, ["item"])
+                              y(Dt, { key: h.path, item: h }, null, 8, ["item"])
                             )
                           ),
                           128
@@ -967,14 +967,14 @@ const At = I(Vt, [["__scopeId", "data-v-737c92d7"]]),
 function Kt(t, e) {
   return o(), d("svg", qt, Jt);
 }
-const Ut = { name: "ep-caret-right", render: Kt },
-  Xt = {
+const Xt = { name: "ep-caret-right", render: Kt },
+  Zt = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
     width: "1.2em",
     height: "1.2em"
   },
-  Zt = f(
+  jt = f(
     "path",
     {
       fill: "currentColor",
@@ -983,11 +983,11 @@ const Ut = { name: "ep-caret-right", render: Kt },
     null,
     -1
   ),
-  jt = [Zt];
-function Gt(t, e) {
-  return o(), d("svg", Xt, jt);
+  Gt = [jt];
+function Ut(t, e) {
+  return o(), d("svg", Zt, Gt);
 }
-const Yt = { name: "ep-close", render: Gt },
+const Yt = { name: "ep-close", render: Ut },
   Qt = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
@@ -1031,14 +1031,14 @@ const no = { name: "ep-caret-left", render: oo },
           ...e.routeHistroy.filter(i => i.path !== "/home")
         ]),
         s = Y(),
-        _ = he(),
+        _ = me(),
         u = S(() => s.fullPath),
         c = function (i) {
           e.removeRouteHistory(i),
             u.value == i && _.push(a.value[a.value.length - 1].path);
         },
         g = Re(),
-        h = function (i) {
+        m = function (i) {
           const p = g.refs["tag-item" + i][0];
           p &&
             !ue(p, "tag-active") &&
@@ -1050,19 +1050,19 @@ const no = { name: "ep-caret-left", render: oo },
             !ue(p, "tag-active") &&
             (de(p, "tag-move-out"), pe(p, "tag-move-in"));
         },
-        m = V(0),
+        h = V(0),
         b = function (i) {
           const p = g.refs["tag-box"],
             R = g.refs.tags.$el,
             O = p.offsetWidth,
             z = R.offsetWidth;
-          if (!(O > z + 16 && (i < 0 || m.value >= 0)))
+          if (!(O > z + 16 && (i < 0 || h.value >= 0)))
             if (i > 0) {
-              const D = Math.abs(m.value);
-              m.value += D > i ? i : D;
+              const D = Math.abs(h.value);
+              h.value += D > i ? i : D;
             } else {
-              const D = O - m.value - z - 16;
-              m.value += D > i ? D : i;
+              const D = O - h.value - z - 16;
+              h.value += D > i ? D : i;
             }
         },
         T = fe([
@@ -1119,29 +1119,29 @@ const no = { name: "ep-caret-left", render: oo },
         },
         A = function (i, p) {
           new Map([
-            ["refresh", U],
+            ["refresh", X],
             ["closeCurrentTag", c],
-            ["closeLeftTag", X],
+            ["closeLeftTag", Z],
             ["closeRightTag", q],
-            ["closeOtherTag", Z],
-            ["closeAllTag", j]
+            ["closeOtherTag", j],
+            ["closeAllTag", G]
           ]).get(i)(p);
         };
-      function U(i) {
+      function X(i) {
         const { fullPath: p, query: R } = n(s);
         e.clearKeepAliveCache(i),
           _.replace({ path: "/redirect" + p, query: R });
       }
-      function X(i) {
+      function Z(i) {
         e.removeRouteHistoryLeft(i);
       }
       function q(i) {
         e.removeRouteHistoryRight(i);
       }
-      function Z(i) {
+      function j(i) {
         e.removeRouteHistoryOther(i);
       }
-      function j() {
+      function G() {
         e.removeRouteHistoryAll();
       }
       return (i, p) => {
@@ -1152,7 +1152,7 @@ const no = { name: "ep-caret-left", render: oo },
           ke = w("el-dropdown-menu"),
           xe = w("el-dropdown"),
           Se = Yt,
-          Ce = Ut;
+          Ce = Xt;
         return (
           o(),
           d("div", ao, [
@@ -1173,7 +1173,7 @@ const no = { name: "ep-caret-left", render: oo },
                     class: "tags",
                     tag: "div",
                     ref: "tags",
-                    style: E({ transform: `translateX(${m.value}px)` })
+                    style: E({ transform: `translateX(${h.value}px)` })
                   },
                   {
                     default: r(() => [
@@ -1200,7 +1200,7 @@ const no = { name: "ep-caret-left", render: oo },
                                 key: $.path,
                                 ref_for: !0,
                                 ref: "tag-item" + W,
-                                onMouseenter: M => h(W),
+                                onMouseenter: M => m(W),
                                 onMouseleave: M => C(W)
                               },
                               [
@@ -1343,13 +1343,13 @@ const no = { name: "ep-caret-left", render: oo },
       };
     }
   });
-const mo = I(go, [["__scopeId", "data-v-d832f0f0"]]);
-function ho() {
+const ho = I(go, [["__scopeId", "data-v-d832f0f0"]]);
+function mo() {
   const t = Y(),
     { changeTitle: e } = ye(),
     { locale: a } = we();
   e(t.meta),
-    me(
+    he(
       () => a.value,
       s => {
         e(t.meta);
@@ -1363,7 +1363,7 @@ const fo = { class: "main-wrapper" },
   bo = v({
     ...wo,
     setup(t) {
-      ho();
+      mo();
       const { isCollapse: e } = le(),
         a = Q(),
         s = fe({
@@ -1376,7 +1376,7 @@ const fo = { class: "main-wrapper" },
         _.value = c;
       }
       return (c, g) => {
-        const h = Fe("resize");
+        const m = Fe("resize");
         return (
           o(),
           d(
@@ -1406,11 +1406,11 @@ const fo = { class: "main-wrapper" },
                     ])
                   },
                   [
-                    G(f("div", vo, null, 512), [[oe, s.appMaskShow]]),
+                    U(f("div", vo, null, 512), [[oe, s.appMaskShow]]),
                     s.showHeader
-                      ? (o(), d("div", yo, [l(xt), l(mo)]))
+                      ? (o(), d("div", yo, [l(xt), l(ho)]))
                       : k("", !0),
-                    G(l(Ue, null, null, 512), [[h, u]])
+                    U(l(Xe, null, null, 512), [[m, u]])
                   ],
                   2
                 )

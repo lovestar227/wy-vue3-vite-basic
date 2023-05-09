@@ -1,7 +1,7 @@
 import {
   c as $,
-  a as k,
-  z as w,
+  a as w,
+  z as k,
   e as x,
   b as U,
   d as O,
@@ -68,8 +68,8 @@ import {
         o,
         i,
         n,
-        r = function (d, h) {
-          h.parentNode.insertBefore(d, h);
+        h = function (d, r) {
+          r.parentNode.insertBefore(d, r);
         };
       if (c && !t.__iconfont__svg__cssinject__) {
         t.__iconfont__svg__cssinject__ = !0;
@@ -83,18 +83,18 @@ import {
       }
       (a = function () {
         var d,
-          h = document.createElement("div");
-        (h.innerHTML = t._iconfont_svg_string_3832053),
-          (h = h.getElementsByTagName("svg")[0]) &&
-            (h.setAttribute("aria-hidden", "true"),
-            (h.style.position = "absolute"),
-            (h.style.width = 0),
-            (h.style.height = 0),
-            (h.style.overflow = "hidden"),
-            (h = h),
+          r = document.createElement("div");
+        (r.innerHTML = t._iconfont_svg_string_3832053),
+          (r = r.getElementsByTagName("svg")[0]) &&
+            (r.setAttribute("aria-hidden", "true"),
+            (r.style.position = "absolute"),
+            (r.style.width = 0),
+            (r.style.height = 0),
+            (r.style.overflow = "hidden"),
+            (r = r),
             (d = document.body).firstChild
-              ? r(h, d.firstChild)
-              : d.appendChild(h));
+              ? h(r, d.firstChild)
+              : d.appendChild(r));
       }),
         document.addEventListener
           ? ~["complete", "loaded", "interactive"].indexOf(document.readyState)
@@ -107,7 +107,7 @@ import {
             ((o = a),
             (i = t.document),
             (n = !1),
-            u(),
+            f(),
             (i.onreadystatechange = function () {
               i.readyState == "complete" &&
                 ((i.onreadystatechange = null), s());
@@ -116,11 +116,11 @@ import {
     function s() {
       n || ((n = !0), o());
     }
-    function u() {
+    function f() {
       try {
         i.documentElement.doScroll("left");
       } catch {
-        return void setTimeout(u, 50);
+        return void setTimeout(f, 50);
       }
       s();
     }
@@ -141,7 +141,7 @@ const n1 = $();
 function s1(t) {
   t.use(n1);
 }
-const r1 = {
+const h1 = {
     menus: {
       homePage: t => {
         const { normalize: c } = t;
@@ -259,9 +259,9 @@ const r1 = {
       }
     }
   },
-  h1 = Object.freeze(
+  r1 = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: r1 },
+      { __proto__: null, default: h1 },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -392,18 +392,18 @@ const r1 = {
     )
   );
 let E = {};
-const m1 = "",
-  z1 = t => {
+const z1 = "/wy-vue3-vite-basic",
+  u1 = t => {
     E = Object.assign(E, t);
   },
   C = () => E,
-  u1 = () =>
-    k({ baseURL: "", method: "get", url: `${m1}/globalSetting.json` }).then(
+  f1 = () =>
+    w({ baseURL: "", method: "get", url: `${z1}/globalSetting.json` }).then(
       ({ data: t }) => {
-        z1(t);
+        u1(t);
       }
     );
-function f1(t) {
+function m1(t) {
   if (typeof t == "string")
     try {
       return !!JSON.parse(t);
@@ -412,11 +412,11 @@ function f1(t) {
     }
   return !1;
 }
-const z = { getItem: M1, setItem: v1, removeItem: F1, clear: g1 };
+const u = { getItem: M1, setItem: v1, removeItem: F1, clear: g1 };
 function M1(t) {
   try {
     const c = localStorage.getItem(t);
-    return c == null || c === "" ? null : f1(c) ? JSON.parse(c) : c;
+    return c == null || c === "" ? null : m1(c) ? JSON.parse(c) : c;
   } catch {
     return null;
   }
@@ -434,13 +434,13 @@ function A(t = "zh-CN") {
   return Object.fromEntries(
     Object.entries(
       Object.assign({
-        "../../../locales/en.yaml": h1,
+        "../../../locales/en.yaml": r1,
         "../../../locales/zh-CN.yaml": d1
       })
     ).map(([c, e]) => [c.match(/([A-Za-z0-9-_]+)\./i)[1], e.default])
   )[t];
 }
-const C1 = { "zh-CN": { ...A("zh-CN"), ...w }, en: { ...A("en"), ...x } };
+const C1 = { "zh-CN": { ...A("zh-CN"), ...k }, en: { ...A("en"), ...x } };
 function D(t = "") {
   if (!t) return "";
   const c = t.split(".")[0];
@@ -448,12 +448,12 @@ function D(t = "") {
     ? g.global.t.call(g.global.locale, t)
     : t;
 }
-const m = t => t;
+const z = t => t;
 let g;
 function _1() {
   g = U({
     legacy: !1,
-    locale: z.getItem("locale") ?? C().locale,
+    locale: u.getItem("locale") ?? C().locale,
     fallbackLocale: "zh-CN",
     messages: C1
   });
@@ -465,10 +465,10 @@ const B = O({
     id: "app",
     state: () => ({
       appMaskShow: !1,
-      locale: z.getItem("locale") ?? C().locale,
+      locale: u.getItem("locale") ?? C().locale,
       routeTransitionName: "router-left",
-      token: z.getItem("token") ?? "",
-      signUser: z.getItem("signUser") ?? null
+      token: u.getItem("token") ?? "",
+      signUser: u.getItem("signUser") ?? null
     }),
     getters: {
       getappMaskShow(t) {
@@ -492,22 +492,22 @@ const B = O({
         this.appMaskShow = t;
       },
       setLocale(t) {
-        this.locale != t && ((this.locale = t), z.setItem("locale", t));
+        this.locale != t && ((this.locale = t), u.setItem("locale", t));
       },
       setRouteTransitionName(t) {
         this.routeTransitionName = t;
       },
       setToken(t) {
-        (this.token = JSON.stringify(t)), z.setItem("token", this.token);
+        (this.token = JSON.stringify(t)), u.setItem("token", this.token);
       },
       setSignUser(t) {
-        (this.signUser = t), z.setItem("signUser", this.signUser);
+        (this.signUser = t), u.setItem("signUser", this.signUser);
       },
       loginOut() {
         (this.token = ""),
           (this.signUser = null),
-          z.removeItem("token"),
-          z.removeItem("user");
+          u.removeItem("token"),
+          u.removeItem("user");
       }
     }
   }),
@@ -516,7 +516,7 @@ const B = O({
     components: { [b.name]: b },
     computed: {
       currentLocale() {
-        return B().locale === "en" ? x : w;
+        return B().locale === "en" ? x : k;
       }
     }
   }),
@@ -537,8 +537,8 @@ function B1(t, c, e, a, l, o) {
 }
 const b1 = y1(A1, [["render", B1]]),
   L1 = "modulepreload",
-  D1 = function (t, c) {
-    return new URL(t, c).href;
+  D1 = function (t) {
+    return "/wy-vue3-vite-basic/" + t;
   },
   P = {},
   p = function (c, e, a) {
@@ -546,13 +546,13 @@ const b1 = y1(A1, [["render", B1]]),
     const l = document.getElementsByTagName("link");
     return Promise.all(
       e.map(o => {
-        if (((o = D1(o, a)), o in P)) return;
+        if (((o = D1(o)), o in P)) return;
         P[o] = !0;
         const i = o.endsWith(".css"),
           n = i ? '[rel="stylesheet"]' : "";
         if (!!a)
-          for (let u = l.length - 1; u >= 0; u--) {
-            const d = l[u];
+          for (let f = l.length - 1; f >= 0; f--) {
+            const d = l[f];
             if (d.href === o && (!i || d.rel === "stylesheet")) return;
           }
         else if (document.querySelector(`link[href="${o}"]${n}`)) return;
@@ -564,8 +564,8 @@ const b1 = y1(A1, [["render", B1]]),
           document.head.appendChild(s),
           i)
         )
-          return new Promise((u, d) => {
-            s.addEventListener("load", u),
+          return new Promise((f, d) => {
+            s.addEventListener("load", f),
               s.addEventListener("error", () =>
                 d(new Error(`Unable to preload CSS for ${o}`))
               );
@@ -585,29 +585,29 @@ const P1 = new Map([
   ["hoverColor", ["--color-theme-hover-color"]]
 ]);
 function o2() {
-  const t = z.getItem("themeColor") ?? C().themeColor;
+  const t = u.getItem("themeColor") ?? C().themeColor;
   return S1(t), t;
 }
 function S1(t) {
   const e = document.documentElement.style.cssText
       .split(";")
-      .filter(r => r)
-      .map(r => r.trim().split(":")),
+      .filter(h => h)
+      .map(h => h.trim().split(":")),
     a = new Map(e),
     l = new Map();
-  P1.forEach((r, s) => {
+  P1.forEach((h, s) => {
     t[s] &&
-      r.forEach(u => {
-        l.set(u, t[s]);
+      h.forEach(f => {
+        l.set(f, t[s]);
       });
   }),
-    l.forEach((r, s) => {
-      a.set(s, r);
+    l.forEach((h, s) => {
+      a.set(s, h);
     });
-  const i = Array.from(a).map(r => r[0] + ":" + r[1]);
+  const i = Array.from(a).map(h => h[0] + ":" + h[1]);
   let n = "";
-  i.forEach((r, s) => {
-    s && (n += " "), (n += r + ";");
+  i.forEach((h, s) => {
+    s && (n += " "), (n += h + ";");
   }),
     (document.documentElement.style.cssText = n);
 }
@@ -672,7 +672,7 @@ const R1 = t =>
         }
       },
       removeRouteHistoryAll() {
-        (this.routeHistroy = []), f.replace({ path: "/redirect/home" });
+        (this.routeHistroy = []), m.replace({ path: "/redirect/home" });
       },
       clearKeepAliveCache(t) {
         const c = M(this.allAliveRoute, { path: t });
@@ -696,12 +696,12 @@ const R1 = t =>
         ) {
           const e = this.allAliveRoute.slice(0);
           (this.allAliveRoute = c),
-            M(t, { path: f.currentRoute.value.fullPath }) > -1 &&
+            M(t, { path: m.currentRoute.value.fullPath }) > -1 &&
               (this.routeHistroy && this.routeHistroy.length
-                ? f.replace({
+                ? m.replace({
                     path: this.routeHistroy[this.routeHistroy.length - 1].path
                   })
-                : f.replace({ path: "/redirect/home" })),
+                : m.replace({ path: "/redirect/home" })),
             setTimeout(() => {
               this.allAliveRoute = e.slice(0);
             }, 500);
@@ -710,7 +710,7 @@ const R1 = t =>
     }
   }),
   T1 = [/\/userLogin/],
-  k1 = {
+  w1 = {
     baseURL: "",
     timeout: 1e4,
     headers: {
@@ -719,11 +719,11 @@ const R1 = t =>
       "X-Requested-With": "XMLHttpRequest"
     }
   },
-  _ = k.create(k1);
+  _ = w.create(w1);
 _.interceptors.request.use(
   t => {
     if ((v.start(), T1.some(a => a.test(t.url)))) return t;
-    const e = z.getItem("token");
+    const e = u.getItem("token");
     if (e) {
       const a = JSON.parse(e),
         l = new Date().getTime();
@@ -740,7 +740,7 @@ _.interceptors.response.use(
   },
   t => (v.done(), Promise.reject(t))
 );
-const w1 = (t, c) =>
+const k1 = (t, c) =>
     new Promise((e, a) => {
       _.get(t, { params: c })
         .then(l => {
@@ -760,7 +760,7 @@ const w1 = (t, c) =>
           a(l.data);
         });
     }),
-  O1 = { $post: x1, $get: w1 },
+  O1 = { $post: x1, $get: k1 },
   I1 = t => O1.$post("/userLogin", t);
 function N1() {
   const t = B();
@@ -772,10 +772,10 @@ function N1() {
   }
   async function e(l) {
     const o = await I1(l);
-    o && (t.setSignUser(o.signUser), t.setToken(o.token), f.push("/home"));
+    o && (t.setSignUser(o.signUser), t.setToken(o.token), m.push("/home"));
   }
   function a() {
-    f.push("/login"), t.loginOut();
+    m.push("/login"), t.loginOut();
   }
   return { changeTitle: c, login: e, logout: a };
 }
@@ -784,19 +784,18 @@ const V1 = {
     name: "ChartsPage",
     component: () =>
       p(
-        () => import("./index-ea124139.js"),
+        () => import("./index-3f82a52a.js"),
         [
-          "./index-ea124139.js",
-          "./index-bbfdc4c8.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "..\\css\\index-76ecb905.css"
-        ],
-        import.meta.url
+          "static/js/index-3f82a52a.js",
+          "static/js/index-bbfdc4c8.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/css/index-76ecb905.css"
+        ]
       ),
     meta: {
       icon: "ep:odometer",
-      title: m("menus.chartsPage"),
+      title: z("menus.chartsPage"),
       keepAlive: !0,
       scrollTop: !0,
       componentName: "ChartsPage"
@@ -804,45 +803,43 @@ const V1 = {
   },
   j1 = () =>
     p(
-      () => import("./Layout-1879a32b.js"),
+      () => import("./Layout-7c4ae627.js"),
       [
-        "./Layout-1879a32b.js",
-        ".pnpm-4a45e2d5.js",
-        "..\\css\\.pnpm-dd82e2c6.css",
-        "./index-bbfdc4c8.js",
-        "./theme-ec27e5b4.js",
-        "..\\css\\theme-136f4b39.css",
-        "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-        "./WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
-        "./index-3c161a70.js",
-        "..\\css\\Layout-2eee370e.css"
-      ],
-      import.meta.url
+        "static/js/Layout-7c4ae627.js",
+        "static/js/.pnpm-4a45e2d5.js",
+        "static/css/.pnpm-dd82e2c6.css",
+        "static/js/index-bbfdc4c8.js",
+        "static/js/theme-a5f17e47.js",
+        "static/css/theme-136f4b39.css",
+        "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+        "static/js/WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
+        "static/js/index-3c161a70.js",
+        "static/css/Layout-2eee370e.css"
+      ]
     ),
   $1 = {
     path: "/error",
     name: "ErrorPage",
     redirect: "/error/500",
     component: j1,
-    meta: { icon: "ep:lightning", title: m("menus.errorPage") },
+    meta: { icon: "ep:lightning", title: z("menus.errorPage") },
     children: [
       {
         path: "/error/404",
         name: "Page404",
         component: () =>
           p(
-            () => import("./404-e7c78940.js"),
+            () => import("./404-c658409c.js"),
             [
-              "./404-e7c78940.js",
-              "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-              ".pnpm-4a45e2d5.js",
-              "..\\css\\.pnpm-dd82e2c6.css",
-              "..\\css\\404-b1c6d7d5.css"
-            ],
-            import.meta.url
+              "static/js/404-c658409c.js",
+              "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+              "static/js/.pnpm-4a45e2d5.js",
+              "static/css/.pnpm-dd82e2c6.css",
+              "static/css/404-b1c6d7d5.css"
+            ]
           ),
         meta: {
-          title: m("menus.404"),
+          title: z("menus.404"),
           keepAlive: !0,
           componentName: "404",
           fixedPage: !0
@@ -854,18 +851,17 @@ const V1 = {
         name: "Page500",
         component: () =>
           p(
-            () => import("./500-041261bf.js"),
+            () => import("./500-ec0e0354.js"),
             [
-              "./500-041261bf.js",
-              "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-              ".pnpm-4a45e2d5.js",
-              "..\\css\\.pnpm-dd82e2c6.css",
-              "..\\css\\500-42b451b3.css"
-            ],
-            import.meta.url
+              "static/js/500-ec0e0354.js",
+              "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+              "static/js/.pnpm-4a45e2d5.js",
+              "static/css/.pnpm-dd82e2c6.css",
+              "static/css/500-42b451b3.css"
+            ]
           ),
         meta: {
-          title: m("menus.500"),
+          title: z("menus.500"),
           keepAlive: !0,
           componentName: "500",
           fixedPage: !0
@@ -879,20 +875,19 @@ const V1 = {
     name: "HomePage",
     component: () =>
       p(
-        () => import("./index-a8703026.js"),
+        () => import("./index-c4add000.js"),
         [
-          "./index-a8703026.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-          "./index-3c161a70.js",
-          "..\\css\\index-e92abb9b.css"
-        ],
-        import.meta.url
+          "static/js/index-c4add000.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+          "static/js/index-3c161a70.js",
+          "static/css/index-ce7e3f22.css"
+        ]
       ),
     meta: {
       icon: "ep:home-filled",
-      title: m("menus.homePage"),
+      title: z("menus.homePage"),
       keepAlive: !0,
       fixedPage: !0,
       componentName: "HomePage"
@@ -903,18 +898,17 @@ const V1 = {
     name: "HooksPage",
     component: () =>
       p(
-        () => import("./index-e1c61182.js"),
+        () => import("./index-408c2179.js"),
         [
-          "./index-e1c61182.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "..\\css\\index-6c799adc.css"
-        ],
-        import.meta.url
+          "static/js/index-408c2179.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/css/index-6c799adc.css"
+        ]
       ),
     meta: {
       icon: "ep:apple",
-      title: m("menus.hooksPage"),
+      title: z("menus.hooksPage"),
       keepAlive: !0,
       componentName: "HooksPage"
     }
@@ -926,17 +920,16 @@ const V1 = {
       p(
         () => import("./index-a6330a2d.js"),
         [
-          "./index-a6330a2d.js",
-          "./WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js"
-        ],
-        import.meta.url
+          "static/js/index-a6330a2d.js",
+          "static/js/WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js"
+        ]
       ),
     meta: {
       icon: "ep:ice-cream-round",
-      title: m("menus.iconsPage"),
+      title: z("menus.iconsPage"),
       keepAlive: !0,
       componentName: "IconsPage"
     }
@@ -946,18 +939,17 @@ const V1 = {
     name: "ListPage",
     component: () =>
       p(
-        () => import("./index-cf2f03a6.js"),
+        () => import("./index-00871fb2.js"),
         [
-          "./index-cf2f03a6.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "..\\css\\index-f2f8ea83.css"
-        ],
-        import.meta.url
+          "static/js/index-00871fb2.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/css/index-f2f8ea83.css"
+        ]
       ),
     meta: {
       icon: "ep:sunset",
-      title: m("menus.listPage"),
+      title: z("menus.listPage"),
       keepAlive: !0,
       componentName: "ListPage"
     }
@@ -966,13 +958,13 @@ const V1 = {
     path: "/menu",
     name: "Menu",
     redirect: "/menu/1",
-    meta: { icon: "ep:pear", title: m("menus.menu") },
+    meta: { icon: "ep:pear", title: z("menus.menu") },
     children: [
       {
         path: "/menu/1",
         name: "Menu1",
         redirect: "/menu/1/3",
-        meta: { icon: "ep:pear", title: m("menus.menu1") },
+        meta: { icon: "ep:pear", title: z("menus.menu1") },
         children: [
           {
             path: "/menu/1/3",
@@ -981,14 +973,13 @@ const V1 = {
               p(
                 () => import("./index1-c5cbb305.js"),
                 [
-                  "./index1-c5cbb305.js",
-                  ".pnpm-4a45e2d5.js",
-                  "..\\css\\.pnpm-dd82e2c6.css"
-                ],
-                import.meta.url
+                  "static/js/index1-c5cbb305.js",
+                  "static/js/.pnpm-4a45e2d5.js",
+                  "static/css/.pnpm-dd82e2c6.css"
+                ]
               ),
             meta: {
-              title: m("menus.menu3"),
+              title: z("menus.menu3"),
               icon: "ep:pear",
               keepAlive: !0,
               componentName: "Menu3"
@@ -1004,14 +995,13 @@ const V1 = {
           p(
             () => import("./index2-9e4efd31.js"),
             [
-              "./index2-9e4efd31.js",
-              ".pnpm-4a45e2d5.js",
-              "..\\css\\.pnpm-dd82e2c6.css"
-            ],
-            import.meta.url
+              "static/js/index2-9e4efd31.js",
+              "static/js/.pnpm-4a45e2d5.js",
+              "static/css/.pnpm-dd82e2c6.css"
+            ]
           ),
         meta: {
-          title: m("menus.menu2"),
+          title: z("menus.menu2"),
           keepAlive: !0,
           componentName: "Menu2"
         },
@@ -1024,20 +1014,19 @@ const V1 = {
     name: "ThemePage",
     component: () =>
       p(
-        () => import("./index-72046299.js"),
+        () => import("./index-f713795f.js"),
         [
-          "./index-72046299.js",
-          "./theme-ec27e5b4.js",
-          ".pnpm-4a45e2d5.js",
-          "..\\css\\.pnpm-dd82e2c6.css",
-          "..\\css\\theme-136f4b39.css",
-          "..\\css\\index-c947b626.css"
-        ],
-        import.meta.url
+          "static/js/index-f713795f.js",
+          "static/js/theme-a5f17e47.js",
+          "static/js/.pnpm-4a45e2d5.js",
+          "static/css/.pnpm-dd82e2c6.css",
+          "static/css/theme-136f4b39.css",
+          "static/css/index-c947b626.css"
+        ]
       ),
     meta: {
       icon: "ep:cold-drink",
-      title: m("menus.themePage"),
+      title: z("menus.themePage"),
       keepAlive: !0,
       componentName: "ThemePage"
     }
@@ -1065,53 +1054,49 @@ function X1(t) {
 }
 const S = () =>
     p(
-      () => import("./Layout-1879a32b.js"),
+      () => import("./Layout-7c4ae627.js"),
       [
-        "./Layout-1879a32b.js",
-        ".pnpm-4a45e2d5.js",
-        "..\\css\\.pnpm-dd82e2c6.css",
-        "./index-bbfdc4c8.js",
-        "./theme-ec27e5b4.js",
-        "..\\css\\theme-136f4b39.css",
-        "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-        "./WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
-        "./index-3c161a70.js",
-        "..\\css\\Layout-2eee370e.css"
-      ],
-      import.meta.url
+        "static/js/Layout-7c4ae627.js",
+        "static/js/.pnpm-4a45e2d5.js",
+        "static/css/.pnpm-dd82e2c6.css",
+        "static/js/index-bbfdc4c8.js",
+        "static/js/theme-a5f17e47.js",
+        "static/css/theme-136f4b39.css",
+        "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+        "static/js/WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js",
+        "static/js/index-3c161a70.js",
+        "static/css/Layout-2eee370e.css"
+      ]
     ),
   Z1 = () =>
     p(
-      () => import("./404-e7c78940.js"),
+      () => import("./404-c658409c.js"),
       [
-        "./404-e7c78940.js",
-        "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
-        ".pnpm-4a45e2d5.js",
-        "..\\css\\.pnpm-dd82e2c6.css",
-        "..\\css\\404-b1c6d7d5.css"
-      ],
-      import.meta.url
+        "static/js/404-c658409c.js",
+        "static/js/WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js",
+        "static/js/.pnpm-4a45e2d5.js",
+        "static/css/.pnpm-dd82e2c6.css",
+        "static/css/404-b1c6d7d5.css"
+      ]
     ),
   Y1 = () =>
     p(
-      () => import("./index-3fe67c32.js"),
+      () => import("./index-bb2b22ac.js"),
       [
-        "./index-3fe67c32.js",
-        ".pnpm-4a45e2d5.js",
-        "..\\css\\.pnpm-dd82e2c6.css",
-        "..\\css\\index-5ceb77d1.css"
-      ],
-      import.meta.url
+        "static/js/index-bb2b22ac.js",
+        "static/js/.pnpm-4a45e2d5.js",
+        "static/css/.pnpm-dd82e2c6.css",
+        "static/css/index-5ceb77d1.css"
+      ]
     ),
   Q1 = () =>
     p(
       () => import("./Redirect-7fc9f216.js"),
       [
-        "./Redirect-7fc9f216.js",
-        ".pnpm-4a45e2d5.js",
-        "..\\css\\.pnpm-dd82e2c6.css"
-      ],
-      import.meta.url
+        "static/js/Redirect-7fc9f216.js",
+        "static/js/.pnpm-4a45e2d5.js",
+        "static/css/.pnpm-dd82e2c6.css"
+      ]
     ),
   I = [
     {
@@ -1143,13 +1128,13 @@ const S = () =>
   i2 = X1(N),
   V = y(N, [], []);
 I[0].children = V;
-const f = Y({ history: Q(), routes: I });
-f.beforeEach((t, c, e) => {
+const m = Y({ history: Q(), routes: I });
+m.beforeEach((t, c, e) => {
   v.start(),
     N1().changeTitle(t.meta),
     B().getToken || t.fullPath == "/login" ? e() : e("/login");
 });
-f.afterEach((t, c, e) => {
+m.afterEach((t, c, e) => {
   H1().addRouteHistory(t), v.done();
 });
 const R = t1({ strategy: "scroll" }),
@@ -1211,17 +1196,17 @@ const F = l1(b1);
 Object.keys(H).forEach(t => {
   F.directive(t, H[t]);
 });
-u1().then(async () => {
+f1().then(async () => {
   s1(F),
     _1(),
-    F.use(f),
-    await f.isReady(),
+    F.use(m),
+    await m.isReady(),
     F.use(a1).use(E1).use(o1).use(i1),
     F.mount("#app");
 });
 l2();
 export {
-  m as $,
+  z as $,
   y1 as _,
   B as a,
   o2 as b,
@@ -1229,6 +1214,6 @@ export {
   C as g,
   i2 as m,
   H1 as r,
-  z as s,
+  u as s,
   N1 as u
 };

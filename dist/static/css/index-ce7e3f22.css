@@ -302,7 +302,7 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background-image: url(../jpg/user-7f3f121e.jpg);
+  background-image: url(/wy-vue3-vite-basic/static/jpg/user-7f3f121e.jpg);
 }
 .home-page .fan-hide-item .fan-item-opacity-in[data-v-ab41cc23] {
   -webkit-animation: opacity-in-ab41cc23 1s;

@@ -22,7 +22,7 @@ import {
   _ as N,
   $ as A
 } from "./.pnpm-4a45e2d5.js";
-import { _ as R } from "./index-02f47d16.js";
+import { _ as R } from "./index-607170c1.js";
 const E = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
