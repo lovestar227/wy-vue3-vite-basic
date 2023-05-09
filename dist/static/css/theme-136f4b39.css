@@ -1,0 +1,61 @@
+@charset "UTF-8";
+[data-v-fecdb2c5]:root {
+  --color-theme-main-color: #4091f7;
+  --color-theme-hover-color: #ecf5ff;
+}
+.wy-switch .wy-switch-botton[data-v-fecdb2c5] {
+  position: relative;
+  display: block;
+  -webkit-transition: background-color var(--wy-switch-transition);
+  transition: background-color var(--wy-switch-transition);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.wy-switch .wy-switch-botton .circle[data-v-fecdb2c5] {
+  position: absolute;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform var(--wy-switch-transition);
+  transition: -webkit-transform var(--wy-switch-transition);
+  transition: transform var(--wy-switch-transition);
+  transition: transform var(--wy-switch-transition),
+    -webkit-transform var(--wy-switch-transition);
+}
+.wy-switch .wy-switch-botton .circle .icon[data-v-fecdb2c5] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wy-switch-open .wy-switch-botton[data-v-fecdb2c5] {
+  border: 1px solid var(--wy-switch-open-border-color);
+  background-color: var(--wy-switch-open-bgc);
+}
+.wy-switch-open .wy-switch-botton .circle[data-v-fecdb2c5] {
+  background-color: var(--wy-switch-open-circle-color);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px #0000000a, 0 1px 2px #0000000f;
+}
+.wy-switch-close .wy-switch-botton[data-v-fecdb2c5] {
+  border: 1px solid var(--wy-switch-close-border-color);
+  background-color: var(--wy-switch-close-bgc);
+}
+.wy-switch-close .wy-switch-botton .circle[data-v-fecdb2c5] {
+  background-color: var(--wy-switch-close-circle-color);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px #0000000a, 0 1px 2px #0000000f;
+}
+button[data-v-fecdb2c5]:enabled {
+  cursor: pointer;
+}
