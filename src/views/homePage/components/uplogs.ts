@@ -1,7 +1,10 @@
 export const logList = [
   {
     version: "V1.0.2",
-    items: ["1.docs: 修改README，增加gitee仓库挂件"]
+    items: [
+      "1.docs: 修改README，增加gitee仓库挂件",
+      "2.refactor: 提取更新日志到uplogs.ts"
+    ]
   },
   {
     version: "V1.0.1",
