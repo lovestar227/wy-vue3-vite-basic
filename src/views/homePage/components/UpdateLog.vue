@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CSSProperties } from "vue";
 
-import { logList } from "./uplogs";
+import { logList } from "./updateLogs";
 
 defineOptions({
   name: "UpdateLog"

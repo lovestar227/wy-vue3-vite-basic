@@ -1,13 +1,13 @@
 export const logList = [
   {
-    version: "V1.0.2",
+    version: "v1.0.2",
     items: [
       "1.docs: 修改README，增加gitee仓库挂件",
       "2.refactor: 提取更新日志到uplogs.ts"
     ]
   },
   {
-    version: "V1.0.1",
+    version: "v1.0.1",
     items: [
       "1.chore: 修改base路径，静态网站部署gitee",
       "2.feat: 首页增加更新日志",
@@ -17,7 +17,7 @@ export const logList = [
     ]
   },
   {
-    version: "V1.0.0",
+    version: "v1.0.0",
     items: [
       "1. 大版本1.0.0发布",
       "2. 基础框架搭建完成",
