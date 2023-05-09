@@ -9,9 +9,11 @@ const logList = [
   {
     version: "V1.0.1",
     items: [
-      "1. 首页增加更新日志",
-      "2.修改默认主题色",
-      "chore: 修改base路径，静态网站部署gitee"
+      "1.chore: 修改base路径，静态网站部署gitee",
+      "2.feat: 首页增加更新日志",
+      "3.fix: 修改默认主题色",
+      "3.fix: 预设颜色选择",
+      "4.feat: 还原默认主题色"
     ]
   },
   {

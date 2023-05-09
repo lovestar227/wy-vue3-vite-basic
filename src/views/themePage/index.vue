@@ -3,6 +3,7 @@ import { TinyColor } from "@ctrl/tinycolor";
 import { computed } from "vue";
 
 import WyDarkToogle from "/@/components/WyDarkToogle/index.vue";
+import { getConfig } from "/@/config";
 import { themeStore } from "/@/store/modules/theme";
 
 defineOptions({
@@ -10,14 +11,15 @@ defineOptions({
 });
 /* 预设颜色 */
 const predefineColors = ref([
+  "#C71A54",
   "#ff4500",
   "#ff8c00",
   "#ffd700",
   "#90ee90",
   "#00ced1",
   "#1e90ff",
-  "#c71585",
-  "#c7158577"
+  "#9515C7",
+  "#c71585"
 ]);
 
 /* 主题色追踪显示 */
@@ -33,10 +35,15 @@ const hoverColor = computed(() => useThemeStore.themeColor?.hoverColor);
  * @param value 将要修改的颜色
  */
 const mainColorChange = (value: string) => {
-  useThemeStore.setThemeColor({
-    mainColor: value,
-    hoverColor: new TinyColor(value).tint(80).toHexString()
-  });
+  //还原默认主题色
+  if (!value) {
+    useThemeStore.setThemeColor(getConfig().themeColor);
+  } else {
+    useThemeStore.setThemeColor({
+      mainColor: value,
+      hoverColor: new TinyColor(value).tint(80).toHexString()
+    });
+  }
 };
 /**
  * 修改系统鼠标悬浮色
