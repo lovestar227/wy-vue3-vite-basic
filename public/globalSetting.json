@@ -6,8 +6,8 @@
   "openBtnPosition": "top",
   "sidebarIsOpen": true,
   "themeColor": {
-    "mainColor": "#409EFF",
-    "hoverColor": "#ecf5ff"
+    "mainColor": "#C71A54",
+    "hoverColor": "#f4d1dd"
   },
   "showScreenFull": true,
   "showDarkToogle": true
