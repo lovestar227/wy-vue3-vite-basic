@@ -4,7 +4,7 @@
 
 [wy-vue3-vite-basic-docs](https://gitee.com/little-star227/wy-vue3-vite-basic-docs)
 
-[wy-vue3-vite-basic 静态文档网站](http://little-star227.gitee.io/wy-vue3-vite-basic-docs/)
+[wy-vue3-vite-basic-docs 静态文档网站](http://little-star227.gitee.io/wy-vue3-vite-basic-docs/)
 
 # 介绍
 
