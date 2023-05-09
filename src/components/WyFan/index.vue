@@ -97,6 +97,7 @@ onBeforeMount(() => {
   width: 100%;
   height: 100%;
   .wy-fan-item {
+    overflow: hidden;
     width: 50px;
     height: 100%;
     border-radius: 5px;
@@ -109,7 +110,6 @@ onBeforeMount(() => {
 
     .hide-fan,
     .open-fan {
-      overflow: hidden;
       height: 100%;
     }
   }

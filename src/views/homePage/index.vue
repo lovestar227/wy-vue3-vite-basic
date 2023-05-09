@@ -94,7 +94,7 @@ const showFanBagImage = (index: number, activeFanIndex: number) => {
 
 <template>
   <div class="home-page">
-    <WyFan :list="fanStatus" :default-active="0">
+    <WyFan :list="fanStatus" :default-active="1">
       <!-- 关闭的扇面 -->
       <template v-slot:hide-fan="{ item, index, activeFanIndex, openFan }">
         <div class="fan-hide-item">
