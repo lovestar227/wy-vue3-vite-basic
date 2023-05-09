@@ -1,0 +1,164 @@
+// element plus 相关覆盖样式
+@use "./theme.scss" as *;
+
+body {
+  /* 侧边栏 不折叠 */
+  .open-sidebar {
+    .side-bar {
+      .el-menu {
+        height: 100%;
+        border: none;
+        background-color: transparent;
+      }
+      .el-menu-item,
+      .el-sub-menu__title {
+        color: $text-color-grey;
+        background-color: transparent;
+        &:hover {
+          color: #000;
+          background-color: $hover-color;
+        }
+      }
+
+      .el-menu-item {
+        //选中动画
+        transition: background-color 0.3s;
+        &.is-active {
+          color: #fff;
+          //菜单选中
+          background-color: $main-color;
+        }
+      }
+
+      .sub-menu-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  /* 侧边栏折叠 */
+  .hide-sidebar {
+    .side-bar {
+      /* 侧边栏菜单折叠 */
+      .el-menu--vertical {
+        &.el-menu--collapse {
+          width: 100%;
+        }
+
+        .el-menu-item > .el-menu-tooltip__trigger,
+        .el-sub-menu__title {
+          padding: 0 19px;
+          height: 56px;
+          line-height: 56px;
+
+          * {
+            vertical-align: middle;
+          }
+        }
+
+        .el-menu-item {
+          padding: 0;
+          color: $text-color-grey;
+          //选中动画
+          transition: background-color 0.3s;
+          &:hover {
+            color: #000;
+            background-color: $hover-color;
+          }
+
+          &.is-active {
+            color: #fff;
+            //菜单选中
+            background-color: $main-color;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        .el-sub-menu {
+          .el-sub-menu__title {
+            color: $text-color-grey;
+            &:hover {
+              color: #000;
+              background-color: $hover-color;
+            }
+          }
+        }
+
+        .sub-menu-icon {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0;
+          font-size: 18px;
+          // 菜单左侧图标
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  /* 侧边栏折叠的子级菜单 popper */
+  .side-bar-popper {
+    border: 0;
+    .el-sub-menu__title {
+      line-height: 14px;
+      &:hover {
+        background-color: $hover-color;
+      }
+
+      & * {
+        vertical-align: middle;
+      }
+      .sub-menu-icon {
+        margin-right: 5px;
+      }
+    }
+    .el-menu-item {
+      &:hover {
+        background-color: $hover-color;
+      }
+      &.is-active {
+        color: #fff;
+        background-color: $main-color;
+      }
+    }
+  }
+
+  /* Dropdown 下拉菜单 */
+  .el-dropdown__popper {
+    .el-dropdown-menu__item:not(.is-disabled):focus {
+      color: $main-color;
+      background-color: $hover-color;
+    }
+  }
+
+  /* el-color-picker 颜色选择器 */
+  .el-color-picker {
+    .el-color-picker__trigger {
+      width: 150px;
+      height: 36px;
+      border: 0;
+    }
+
+    &:hover:not(.is-disabled) .el-color-picker__trigger,
+    .el-color-picker__color {
+      border: 0;
+    }
+
+    .el-color-picker__color-inner {
+      border-radius: 30px;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}

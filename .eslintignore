@@ -1,0 +1,8 @@
+#eslint 校验忽略文件、文件夹
+
+public
+dist
+*.d.ts
+package.json
+/src/assets
+node_modules

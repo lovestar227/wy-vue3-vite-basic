@@ -1,0 +1,64 @@
+//主题色
+
+// color 变量 map in Sass
+$colors: (
+  theme: (
+    main-color: #4091f7,
+    hover-color: #ecf5ff
+  )
+);
+//变量前缀
+$color-prefix: --color-;
+
+/**
+  *scss变量转css3变量
+  *$color-name 一级
+  *$color-variant 二级
+*/
+@function color($color-name, $color-variant: null, $true-val: false) {
+  //$true-val：true-返回值
+  @if $true-val == true {
+    @if ($color-variant != null) {
+      // 二级
+      @return map-get(map-get($colors, $color-name), $color-variant);
+    } @else {
+      // 一级
+      @return map-get($colors, $color-name);
+    }
+    //$true-val：true-返回变量
+  } @else {
+    @if ($color-variant != null) {
+      // 二级
+      @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+    } @else {
+      // 一级
+      @return var(#{$color-prefix}#{$color-name});
+    }
+  }
+}
+
+/* 初始化root变量 */
+:root {
+  @each $name, $color in $colors {
+    @if type-of($color) == "map" {
+      @each $subname, $subcolor in $color {
+        // 二级变量
+        // --color-primary-base
+        #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+      }
+    } @else if type-of($color) == "color" {
+      // 一级变量
+      // --color-background
+      #{$color-prefix}#{$name}: $color;
+    }
+  }
+}
+
+/**
+  *主题色
+*/
+$main-color: color(theme, main-color, false);
+$hover-color: color(theme, hover-color, false);
+$sidebar-item-background-color: #0f0303;
+$text-color-grey: #8b8585;
+$text-color-black: #000;

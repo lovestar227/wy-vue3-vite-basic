@@ -1,0 +1,16 @@
+{
+  "Vue3 带setup语法糖 代码模板": {
+    "prefix": "Vue3",
+    "body": [
+      "<script setup lang='ts'>\n",
+      "</script>\n",
+      "<template>",
+      "\t<div>\n",
+      "\t</div>",
+      "</template>\n",
+      "<style lang=\"scss\" scoped>\n",
+      "</style>"
+    ],
+    "description": "Vue3 带setup语法糖 代码模板"
+  }
+}

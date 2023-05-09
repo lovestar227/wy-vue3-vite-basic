@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "title": "WYJS",
+  "locale": "zh-CN",
+  "showHeader": true,
+  "openBtnPosition": "top",
+  "sidebarIsOpen": true,
+  "themeColor": {
+    "mainColor": "#409EFF",
+    "hoverColor": "#ecf5ff"
+  },
+  "showScreenFull": true,
+  "showDarkToogle": true
+}

@@ -1,0 +1,32 @@
+menus:
+  homePage: Home
+  menu: Multi level menu
+  menu1: Menu 1
+  menu2: Menu 2
+  menu3: Menu 3
+  hooksPage: Hooks
+  themePage: Theme Color
+  iconsPage: Icons
+  chartsPage: Charts
+  listPage: List
+  errorPage: Error Page
+  '404': '404'
+  '500': '500'
+buttons:
+  loginOut: Get Out
+  fullScreen: Full screen
+  exitFullScreen: Exit full screen
+  refresh: refresh
+  closeCurrentTag: close current tag
+  closeLeftTag: close left tag
+  closeRightTag: close right tag
+  closeOtherTag: close other tag
+  closeAllTag: close all tag
+page:
+  menu:
+    childMenu2: Child Menu 2
+    childMenu3: Child Menu 3
+  '404':
+    pageLoss: Page loss
+  '500':
+    pageError: Page Error

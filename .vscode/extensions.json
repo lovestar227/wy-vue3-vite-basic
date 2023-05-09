@@ -1,0 +1,24 @@
+//vscode 拓展（插件）
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "hookyqr.beautify",
+    "ms-ceintl.vscode-language-pack-zh-hans",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ecmel.vscode-html-css",
+    "abusaidm.html-snippets",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
+    "xabikos.javascriptsnippets",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "cssho.vscode-svgviewer",
+    "vue.vscode-typescript-vue-plugin",
+    "antfu.unocss",
+    "Vue.volar",
+    "redhat.vscode-yaml"
+  ]
+}
