@@ -3,8 +3,8 @@ import {
   f as v,
   v as S,
   x as V,
-  y as Y,
-  A as he,
+  y as Q,
+  A as me,
   B as d,
   h as l,
   w as r,
@@ -17,7 +17,7 @@ import {
   F as f,
   G as Ie,
   H as P,
-  u as me,
+  u as he,
   I as J,
   J as K,
   L as x,
@@ -25,7 +25,7 @@ import {
   P as k,
   Q as E,
   R as B,
-  S as U,
+  S as Y,
   T as oe,
   U as _e,
   V as Le,
@@ -49,12 +49,12 @@ import {
   u as ye,
   m as Ne,
   $ as F
-} from "./index-607170c1.js";
-import { t as Ve, _ as Ae } from "./theme-a5f17e47.js";
+} from "./index-4903d644.js";
+import { t as Ve, _ as Ae } from "./theme-9b37b190.js";
 import { _ as se } from "./WyIconFont.vue_vue_type_script_setup_true_lang-c29fe689.js";
+import { u as ue, h as de, a as pe, r as ge } from "./user-e1c9ffd8.js";
 import { _ as ae } from "./WyIconify.vue_vue_type_script_setup_true_lang-4d0913ae.js";
-import { h as ue, a as de, r as pe } from "./index-3c161a70.js";
-const Q = Te({
+const j = Te({
     id: "setting",
     state: () => {
       var t, e, a, s, _;
@@ -128,9 +128,9 @@ const Q = Te({
           })
         ),
         s = V(null),
-        _ = Y();
+        _ = Q();
       return (
-        he(
+        me(
           () => _,
           (u, c) => {
             var g;
@@ -143,13 +143,13 @@ const Q = Te({
         ),
         (u, c) => {
           const g = w("el-backtop"),
-            m = w("el-scrollbar"),
+            h = w("el-scrollbar"),
             C = w("router-view");
           return (
             o(),
             d("div", qe, [
               l(C, null, {
-                default: r(({ Component: h, route: b }) => {
+                default: r(({ Component: m, route: b }) => {
                   var T;
                   return [
                     (T = b.meta) != null && T.fixedPage
@@ -161,7 +161,7 @@ const Q = Te({
                             { include: n(a) },
                             [
                               (o(),
-                              y(re(h), {
+                              y(re(m), {
                                 key: b.fullPath,
                                 class: "main-content"
                               }))
@@ -172,7 +172,7 @@ const Q = Te({
                         ]))
                       : (o(),
                         y(
-                          m,
+                          h,
                           { key: 0, ref_key: "mainViewScrollBarRef", ref: s },
                           {
                             default: r(() => [
@@ -186,7 +186,7 @@ const Q = Te({
                                 { include: n(a) },
                                 [
                                   (o(),
-                                  y(re(h), {
+                                  y(re(m), {
                                     key: b.fullPath,
                                     class: "main-content"
                                   }))
@@ -216,7 +216,7 @@ const Xe = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
     width: "1.2em",
     height: "1.2em"
   },
-  je = f(
+  Ge = f(
     "path",
     {
       fill: "currentColor",
@@ -225,7 +225,7 @@ const Xe = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
     null,
     -1
   ),
-  Ge = f(
+  Ue = f(
     "path",
     {
       fill: "currentColor",
@@ -234,11 +234,11 @@ const Xe = I(Ke, [["__scopeId", "data-v-0a570a8d"]]),
     null,
     -1
   ),
-  Ue = [je, Ge];
-function Ye(t, e) {
-  return o(), d("svg", Ze, Ue);
+  Ye = [Ge, Ue];
+function Qe(t, e) {
+  return o(), d("svg", Ze, Ye);
 }
-const Qe = { name: "ep-back", render: Ye },
+const je = { name: "ep-back", render: Qe },
   et = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
@@ -258,8 +258,7 @@ const Qe = { name: "ep-back", render: Ye },
 function nt(t, e) {
   return o(), d("svg", et, ot);
 }
-const st = { name: "ep-check", render: nt },
-  ge = "/wy-vue3-vite-basic/static/jpg/user-7f3f121e.jpg";
+const st = { name: "ep-check", render: nt };
 function we() {
   const { locale: t, t: e } = Ie(),
     a = ne();
@@ -272,7 +271,7 @@ function we() {
   return { t: e, locale: t, translateZh: s, translateEn: _ };
 }
 function le() {
-  const t = Q(),
+  const t = j(),
     e = S(() => !t.getSidebarIsOpen);
   function a() {
     t.toggleSideBar();
@@ -341,7 +340,7 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
   ut = v({
     ..._t,
     setup(t) {
-      const e = me(),
+      const e = he(),
         a = S(() => {
           var _, u;
           return (u = (_ = e.currentRoute.value) == null ? void 0 : _.meta) ==
@@ -373,11 +372,11 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
                     null,
                     K(
                       n(a),
-                      (m, C) => (
+                      (h, C) => (
                         o(),
                         y(
                           c,
-                          { key: m.path },
+                          { key: h.path },
                           {
                             default: r(() => [
                               C != n(a).length - 1
@@ -386,14 +385,14 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
                                     "span",
                                     {
                                       key: 0,
-                                      onClick: h => s(m),
+                                      onClick: m => s(h),
                                       class: "can-redirect"
                                     },
-                                    x(_.$t(m.title)),
+                                    x(_.$t(h.title)),
                                     9,
                                     it
                                   ))
-                                : (o(), d("span", rt, x(_.$t(m.title)), 1))
+                                : (o(), d("span", rt, x(_.$t(h.title)), 1))
                             ]),
                             _: 2
                           },
@@ -415,7 +414,7 @@ const be = I(lt, [["__scopeId", "data-v-c7ff46e4"]]),
 const dt = I(ut, [["__scopeId", "data-v-ece15a80"]]),
   pt = { class: "screen-full-box" },
   gt = v({ name: "ScreenFull" }),
-  ht = v({
+  mt = v({
     ...gt,
     setup(t) {
       const { isFullscreen: e, toggle: a } = Be();
@@ -442,7 +441,7 @@ const dt = I(ut, [["__scopeId", "data-v-ece15a80"]]),
       };
     }
   });
-const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
+const ht = I(mt, [["__scopeId", "data-v-e3d9bfea"]]),
   ft = { class: "navbar" },
   vt = { class: "vertical-header-right" },
   yt = { class: "user-box" },
@@ -453,7 +452,7 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
     ...$t,
     setup(t) {
       const { logout: e } = ye(),
-        { showScreenFull: a, showDarkToogle: s, openBtnPosition: _ } = Q(),
+        { showScreenFull: a, showDarkToogle: s, openBtnPosition: _ } = j(),
         u = S(() => {
           var L;
           return (L = ne().signUser) == null ? void 0 : L.userName;
@@ -463,7 +462,7 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
           background: L === A ? Ve().themeColor.mainColor : "",
           color: L === A ? "#fff" : "#000"
         })),
-        { locale: m, translateZh: C, translateEn: h } = we(),
+        { locale: h, translateZh: C, translateEn: m } = we(),
         { isCollapse: b, toggleSideBar: T } = le(),
         ee = {
           display: "inline-flex",
@@ -476,10 +475,10 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
         const X = se,
           Z = st,
           q = w("el-dropdown-item"),
-          j = w("el-dropdown-menu"),
-          G = w("el-dropdown"),
+          G = w("el-dropdown-menu"),
+          U = w("el-dropdown"),
           i = Ae,
-          p = Qe;
+          p = je;
         return (
           o(),
           d("div", ft, [
@@ -495,35 +494,35 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
               : k("", !0),
             l(dt),
             f("div", vt, [
-              n(a) ? (o(), y(mt, { key: 0 })) : k("", !0),
+              n(a) ? (o(), y(ht, { key: 0 })) : k("", !0),
               l(
-                G,
+                U,
                 { trigger: "click", class: "toogle-locale" },
                 {
                   dropdown: r(() => [
                     l(
-                      j,
+                      G,
                       { class: "translate" },
                       {
                         default: r(() => [
                           l(
                             q,
                             {
-                              style: E(n(g)(n(m), "zh-CN")),
+                              style: E(n(g)(n(h), "zh-CN")),
                               class: "transition-dropdown-item",
                               onClick: n(C)
                             },
                             {
                               default: r(() => [
                                 B(" 简体中文 "),
-                                U(
+                                Y(
                                   l(
                                     Z,
                                     { style: { "margin-left": "10px" } },
                                     null,
                                     512
                                   ),
-                                  [[oe, n(m) === "zh-CN"]]
+                                  [[oe, n(h) === "zh-CN"]]
                                 )
                               ]),
                               _: 1
@@ -534,21 +533,21 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
                           l(
                             q,
                             {
-                              style: E(n(g)(n(m), "en")),
+                              style: E(n(g)(n(h), "en")),
                               class: "transition-dropdown-item",
-                              onClick: n(h)
+                              onClick: n(m)
                             },
                             {
                               default: r(() => [
                                 B(" English "),
-                                U(
+                                Y(
                                   l(
                                     Z,
                                     { style: { "margin-left": "10px" } },
                                     null,
                                     512
                                   ),
-                                  [[oe, n(m) === "en"]]
+                                  [[oe, n(h) === "en"]]
                                 )
                               ]),
                               _: 1
@@ -563,7 +562,7 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
                   ]),
                   default: r(() => [
                     f("span", null, [
-                      n(m) === "en"
+                      n(h) === "en"
                         ? (o(),
                           y(X, {
                             key: 0,
@@ -571,7 +570,7 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
                             class: "toogle-locale-icon"
                           }))
                         : k("", !0),
-                      n(m) === "zh-CN"
+                      n(h) === "zh-CN"
                         ? (o(),
                           y(X, {
                             key: 1,
@@ -586,12 +585,12 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
               ),
               n(s) ? (o(), y(i, { key: 1 })) : k("", !0),
               l(
-                G,
+                U,
                 { trigger: "click" },
                 {
                   dropdown: r(() => [
                     l(
-                      j,
+                      G,
                       { class: "logout" },
                       {
                         default: r(() => [
@@ -615,11 +614,11 @@ const mt = I(ht, [["__scopeId", "data-v-e3d9bfea"]]),
                   ]),
                   default: r(() => [
                     f("span", yt, [
-                      n(ge)
+                      n(ue)
                         ? (o(),
                           d(
                             "img",
-                            { key: 0, src: n(ge), style: E(n(c)) },
+                            { key: 0, src: n(ue), style: E(n(c)) },
                             null,
                             12,
                             wt
@@ -663,11 +662,11 @@ const xt = I(kt, [["__scopeId", "data-v-285397a3"]]),
           });
       }
       return (c, g) => {
-        const m = w("el-tooltip");
+        const h = w("el-tooltip");
         return (
           o(),
           y(
-            m,
+            h,
             { placement: "top", offset: -10, disabled: s.value },
             {
               content: r(() => [
@@ -780,7 +779,7 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
         const u = ae,
           c = $e,
           g = w("el-menu-item"),
-          m = w("side-bar-item", !0),
+          h = w("side-bar-item", !0),
           C = w("el-sub-menu");
         return !e.item.children || e.item.children.length == 0
           ? (o(),
@@ -800,9 +799,9 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
                   ])
                 ]),
                 default: r(() => {
-                  var h, b;
+                  var m, b;
                   return [
-                    (h = e.item.meta) != null && h.icon
+                    (m = e.item.meta) != null && m.icon
                       ? (o(),
                         d("div", Lt, [
                           l(
@@ -829,9 +828,9 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
               { key: 1, index: e.item.path, "popper-class": "side-bar-popper" },
               {
                 title: r(() => {
-                  var h, b;
+                  var m, b;
                   return [
-                    (h = e.item.meta) != null && h.icon
+                    (m = e.item.meta) != null && m.icon
                       ? (o(),
                         d("div", Rt, [
                           l(
@@ -861,8 +860,8 @@ const Bt = I(It, [["__scopeId", "data-v-36d560bd"]]),
                     null,
                     K(
                       e.item.children,
-                      h => (
-                        o(), y(m, { key: h.path, item: h }, null, 8, ["item"])
+                      m => (
+                        o(), y(h, { key: m.path, item: m }, null, 8, ["item"])
                       )
                     ),
                     128
@@ -885,12 +884,12 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
   Vt = v({
     ...Nt,
     setup(t) {
-      const e = Y(),
-        { openBtnPosition: a } = Q(),
+      const e = Q(),
+        { openBtnPosition: a } = j(),
         { isCollapse: s, toggleSideBar: _ } = le(),
         u = c => {};
       return (c, g) => {
-        const m = w("el-menu"),
+        const h = w("el-menu"),
           C = w("el-scrollbar");
         return (
           o(),
@@ -900,7 +899,7 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
               l(C, null, {
                 default: r(() => [
                   l(
-                    m,
+                    h,
                     {
                       router: "",
                       "unique-opened": "",
@@ -909,7 +908,7 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
                       collapse: n(s),
                       "default-active": n(e).path,
                       "collapse-transition": !1,
-                      onSelect: g[0] || (g[0] = h => u(h))
+                      onSelect: g[0] || (g[0] = m => u(m))
                     },
                     {
                       default: r(() => [
@@ -919,9 +918,9 @@ const Dt = I(zt, [["__scopeId", "data-v-29b6a693"]]),
                           null,
                           K(
                             n(Ne),
-                            h => (
+                            m => (
                               o(),
-                              y(Dt, { key: h.path, item: h }, null, 8, ["item"])
+                              y(Dt, { key: m.path, item: m }, null, 8, ["item"])
                             )
                           ),
                           128
@@ -974,7 +973,7 @@ const Xt = { name: "ep-caret-right", render: Kt },
     width: "1.2em",
     height: "1.2em"
   },
-  jt = f(
+  Gt = f(
     "path",
     {
       fill: "currentColor",
@@ -983,12 +982,12 @@ const Xt = { name: "ep-caret-right", render: Kt },
     null,
     -1
   ),
-  Gt = [jt];
-function Ut(t, e) {
-  return o(), d("svg", Zt, Gt);
+  Ut = [Gt];
+function Yt(t, e) {
+  return o(), d("svg", Zt, Ut);
 }
-const Yt = { name: "ep-close", render: Ut },
-  Qt = {
+const Qt = { name: "ep-close", render: Yt },
+  jt = {
     class: "icon-svg",
     viewBox: "0 0 1024 1024",
     width: "1.2em",
@@ -1002,7 +1001,7 @@ const Yt = { name: "ep-close", render: Ut },
   ),
   to = [eo];
 function oo(t, e) {
-  return o(), d("svg", Qt, to);
+  return o(), d("svg", jt, to);
 }
 const no = { name: "ep-caret-left", render: oo },
   so = t => (De("data-v-d832f0f0"), (t = t()), He(), t),
@@ -1030,39 +1029,39 @@ const no = { name: "ep-caret-left", render: oo },
           },
           ...e.routeHistroy.filter(i => i.path !== "/home")
         ]),
-        s = Y(),
-        _ = me(),
+        s = Q(),
+        _ = he(),
         u = S(() => s.fullPath),
         c = function (i) {
           e.removeRouteHistory(i),
             u.value == i && _.push(a.value[a.value.length - 1].path);
         },
         g = Re(),
-        m = function (i) {
+        h = function (i) {
           const p = g.refs["tag-item" + i][0];
           p &&
-            !ue(p, "tag-active") &&
-            (de(p, "tag-move-in"), pe(p, "tag-move-out"));
+            !de(p, "tag-active") &&
+            (pe(p, "tag-move-in"), ge(p, "tag-move-out"));
         },
         C = function (i) {
           const p = g.refs["tag-item" + i][0];
           p &&
-            !ue(p, "tag-active") &&
-            (de(p, "tag-move-out"), pe(p, "tag-move-in"));
+            !de(p, "tag-active") &&
+            (pe(p, "tag-move-out"), ge(p, "tag-move-in"));
         },
-        h = V(0),
+        m = V(0),
         b = function (i) {
           const p = g.refs["tag-box"],
             R = g.refs.tags.$el,
             O = p.offsetWidth,
             z = R.offsetWidth;
-          if (!(O > z + 16 && (i < 0 || h.value >= 0)))
+          if (!(O > z + 16 && (i < 0 || m.value >= 0)))
             if (i > 0) {
-              const D = Math.abs(h.value);
-              h.value += D > i ? i : D;
+              const D = Math.abs(m.value);
+              m.value += D > i ? i : D;
             } else {
-              const D = O - h.value - z - 16;
-              h.value += D > i ? D : i;
+              const D = O - m.value - z - 16;
+              m.value += D > i ? D : i;
             }
         },
         T = fe([
@@ -1123,8 +1122,8 @@ const no = { name: "ep-caret-left", render: oo },
             ["closeCurrentTag", c],
             ["closeLeftTag", Z],
             ["closeRightTag", q],
-            ["closeOtherTag", j],
-            ["closeAllTag", G]
+            ["closeOtherTag", G],
+            ["closeAllTag", U]
           ]).get(i)(p);
         };
       function X(i) {
@@ -1138,10 +1137,10 @@ const no = { name: "ep-caret-left", render: oo },
       function q(i) {
         e.removeRouteHistoryRight(i);
       }
-      function j(i) {
+      function G(i) {
         e.removeRouteHistoryOther(i);
       }
-      function G() {
+      function U() {
         e.removeRouteHistoryAll();
       }
       return (i, p) => {
@@ -1151,7 +1150,7 @@ const no = { name: "ep-caret-left", render: oo },
           D = w("el-dropdown-item"),
           ke = w("el-dropdown-menu"),
           xe = w("el-dropdown"),
-          Se = Yt,
+          Se = Qt,
           Ce = Xt;
         return (
           o(),
@@ -1173,7 +1172,7 @@ const no = { name: "ep-caret-left", render: oo },
                     class: "tags",
                     tag: "div",
                     ref: "tags",
-                    style: E({ transform: `translateX(${h.value}px)` })
+                    style: E({ transform: `translateX(${m.value}px)` })
                   },
                   {
                     default: r(() => [
@@ -1200,7 +1199,7 @@ const no = { name: "ep-caret-left", render: oo },
                                 key: $.path,
                                 ref_for: !0,
                                 ref: "tag-item" + W,
-                                onMouseenter: M => m(W),
+                                onMouseenter: M => h(W),
                                 onMouseleave: M => C(W)
                               },
                               [
@@ -1343,13 +1342,13 @@ const no = { name: "ep-caret-left", render: oo },
       };
     }
   });
-const ho = I(go, [["__scopeId", "data-v-d832f0f0"]]);
-function mo() {
-  const t = Y(),
+const mo = I(go, [["__scopeId", "data-v-d832f0f0"]]);
+function ho() {
+  const t = Q(),
     { changeTitle: e } = ye(),
     { locale: a } = we();
   e(t.meta),
-    he(
+    me(
       () => a.value,
       s => {
         e(t.meta);
@@ -1363,9 +1362,9 @@ const fo = { class: "main-wrapper" },
   bo = v({
     ...wo,
     setup(t) {
-      mo();
+      ho();
       const { isCollapse: e } = le(),
-        a = Q(),
+        a = j(),
         s = fe({
           appMaskShow: S(() => ne().appMaskShow),
           showHeader: S(() => a.showHeader)
@@ -1376,7 +1375,7 @@ const fo = { class: "main-wrapper" },
         _.value = c;
       }
       return (c, g) => {
-        const m = Fe("resize");
+        const h = Fe("resize");
         return (
           o(),
           d(
@@ -1406,11 +1405,11 @@ const fo = { class: "main-wrapper" },
                     ])
                   },
                   [
-                    U(f("div", vo, null, 512), [[oe, s.appMaskShow]]),
+                    Y(f("div", vo, null, 512), [[oe, s.appMaskShow]]),
                     s.showHeader
-                      ? (o(), d("div", yo, [l(xt), l(ho)]))
+                      ? (o(), d("div", yo, [l(xt), l(mo)]))
                       : k("", !0),
-                    U(l(Xe, null, null, 512), [[m, u]])
+                    Y(l(Xe, null, null, 512), [[h, u]])
                   ],
                   2
                 )

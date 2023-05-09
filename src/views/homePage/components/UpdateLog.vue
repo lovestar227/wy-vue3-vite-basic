@@ -8,7 +8,11 @@ defineOptions({
 const logList = [
   {
     version: "V1.0.1",
-    items: ["1. 首页增加更新日志", "2.修改默认主题色"]
+    items: [
+      "1. 首页增加更新日志",
+      "2.修改默认主题色",
+      "chore: 修改base路径，静态网站部署gitee"
+    ]
   },
   {
     version: "V1.0.0",

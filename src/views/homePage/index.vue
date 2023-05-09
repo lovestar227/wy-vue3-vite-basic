@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import userImage from "/@/assets/user.jpg";
 import { HomeFanItem } from "/@/types/view/homePage";
 import { addClass, hasClass } from "/@/utils/index";
 
@@ -90,6 +91,15 @@ const showFanBagImage = (index: number, activeFanIndex: number) => {
     }
   }
 };
+//图片-骨架屏 loading
+const imageLoading = ref(true);
+onMounted(() => {
+  const img = new Image();
+  img.onload = () => {
+    imageLoading.value = false;
+  };
+  img.src = userImage;
+});
 </script>
 
 <template>
@@ -116,11 +126,26 @@ const showFanBagImage = (index: number, activeFanIndex: number) => {
           <div class="fan-item-title">
             {{ item.title }}
           </div>
-          <div
-            v-show="!item.open"
-            :class="['fan-item-bagImage']"
-            :ref="'fan-item-bagImage' + index"
-          ></div>
+          <!-- 图片-骨架屏 过渡 -->
+          <el-skeleton
+            :loading="imageLoading"
+            animated
+            class="fan-item-bagImage"
+          >
+            <template #template>
+              <el-skeleton-item
+                variant="image"
+                :style="`width: 100%; height: 100%`"
+              />
+            </template>
+            <template #default>
+              <div
+                v-show="!item.open"
+                :class="['fan-item-bagImage']"
+                :ref="'fan-item-bagImage' + index"
+              ></div>
+            </template>
+          </el-skeleton>
         </div>
       </template>
       <!-- 打开的扇面 -->
