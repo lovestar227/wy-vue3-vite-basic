@@ -1,0 +1,27 @@
+@charset "UTF-8";
+[data-v-579d679e]:root {
+  --color-theme-main-color: #4091f7;
+  --color-theme-hover-color: #ecf5ff;
+}
+.page-500[data-v-579d679e] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.page-500 .icon-food-cake[data-v-579d679e] {
+  width: 300px;
+  height: 300px;
+}
+.page-500 .middle-box .icon-500[data-v-579d679e] {
+  font-size: 100px;
+  font-weight: 700;
+  color: #9e5126;
+}
