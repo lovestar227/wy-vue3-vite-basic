@@ -69,12 +69,12 @@ export const routes: RouteRecordRaw[] = [
 
 const allRoutes: any[] = [
   homeRouter,
-  menuRouter,
   themeRouter,
   iconsRouter,
   chartsRouter,
   listRouter,
   hooksRouter,
+  menuRouter,
   errorRouter
 ];
 /**
