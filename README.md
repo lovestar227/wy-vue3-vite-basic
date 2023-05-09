@@ -1,10 +1,12 @@
 <h1 align="center">wy-vue3-vite-basic</h1>
 
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+<a href='https://gitee.com/little-star227/wy-vue3-vite-basic/stargazers'><img src='https://gitee.com/little-star227/wy-vue3-vite-basic/badge/star.svg?theme=dark' alt='star'></img></a>
+<a href='https://gitee.com/little-star227/wy-vue3-vite-basic/members'><img src='https://gitee.com/little-star227/wy-vue3-vite-basic/badge/fork.svg?theme=dark' alt='fork'></img></a>
 
 [wy-vue3-vite-basic-docs](https://gitee.com/little-star227/wy-vue3-vite-basic-docs)
 
-[wy-vue3-vite-basic 静态文档网站](http://little-star227.gitee.io/wy-vue3-vite-basic-docs/)
+[wy-vue3-vite-basic-docs 静态文档网站](http://little-star227.gitee.io/wy-vue3-vite-basic-docs/)
 
 # 介绍
 
