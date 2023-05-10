@@ -78,16 +78,16 @@
 .screen-full-box[data-v-e3d9bfea] .wy-icon:hover {
   color: var(--color-theme-main-color);
 }
-[data-v-285397a3]:root {
+[data-v-857ffbb1]:root {
   --color-theme-main-color: #4091f7;
   --color-theme-hover-color: #ecf5ff;
 }
-.navbar[data-v-285397a3] {
+.navbar[data-v-857ffbb1] {
   overflow: hidden;
   width: 100%;
   height: 50px;
 }
-.navbar .vertical-header-right[data-v-285397a3] {
+.navbar .vertical-header-right[data-v-857ffbb1] {
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -98,7 +98,7 @@
   align-items: center;
   height: 50px;
 }
-.navbar .vertical-header-right .toogle-locale[data-v-285397a3] {
+.navbar .vertical-header-right .toogle-locale[data-v-857ffbb1] {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -110,21 +110,21 @@
 }
 .navbar
   .vertical-header-right
-  .toogle-locale[data-v-285397a3]
+  .toogle-locale[data-v-857ffbb1]
   .toogle-locale-icon {
   font-size: 20px;
   cursor: pointer;
 }
 .navbar
   .vertical-header-right
-  .toogle-locale[data-v-285397a3]
+  .toogle-locale[data-v-857ffbb1]
   .toogle-locale-icon:hover {
   color: var(--color-theme-main-color);
 }
-.navbar .vertical-header-right[data-v-285397a3] .wy-dark-toogle {
+.navbar .vertical-header-right[data-v-857ffbb1] .wy-dark-toogle {
   margin: 0 12px;
 }
-.navbar .vertical-header-right .user-box[data-v-285397a3] {
+.navbar .vertical-header-right .user-box[data-v-857ffbb1] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,13 +137,13 @@
   height: 50px;
   cursor: pointer;
 }
-.navbar .vertical-header-right .user-box[data-v-285397a3]:hover {
+.navbar .vertical-header-right .user-box[data-v-857ffbb1]:hover {
   color: var(--color-theme-main-color);
 }
-.navbar .vertical-header-right .user-box p[data-v-285397a3] {
+.navbar .vertical-header-right .user-box p[data-v-857ffbb1] {
   font-size: 14px;
 }
-.navbar .vertical-header-right .user-box img[data-v-285397a3] {
+.navbar .vertical-header-right .user-box img[data-v-857ffbb1] {
   width: 22px;
   height: 22px;
   border-radius: 50%;
