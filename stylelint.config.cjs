@@ -35,7 +35,7 @@ module.exports = {
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        ignorePseudoClasses: ["deep"]
+        ignorePseudoClasses: ["deep", "global"]
       }
     ],
     //不允许未知的伪元素选择器。

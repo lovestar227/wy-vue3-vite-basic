@@ -1,7 +1,12 @@
 // 全局样式设置
 
+//element plus 全局样式
 @use "./elStyle.scss";
+//各popover 样式
+@use "./popover.scss";
 @use "./theme.scss" as *;
+//全局动画样式
+@use "keyframes.scss";
 
 html,
 body {

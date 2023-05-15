@@ -6,6 +6,7 @@ import { storageLocal } from "/@/utils";
 
 //不需要校验token的接口
 const notTokenPaths = [/\/userLogin/];
+//默认配置
 const defaultConfig: AxiosRequestConfig = {
   //如果使用生产mock baseURL要置空
   baseURL:
@@ -15,8 +16,7 @@ const defaultConfig: AxiosRequestConfig = {
   timeout: 10000,
   headers: {
     Accept: "application/json, text/plain, */*",
-    "Content-Type": "application/json",
-    "X-Requested-With": "XMLHttpRequest"
+    "Content-Type": "application/json"
   }
 };
 
@@ -25,14 +25,20 @@ const myAxios = axios.create(defaultConfig);
 myAxios.interceptors.request.use(
   config => {
     NProgress.start(); // 开启进度条动画
-
+    //请求外部接口
+    if (config.requestOutside) {
+      return config;
+    }
+    config.headers["X-Requested-With"] = "XMLHttpRequest";
+    //判断是否不需要校验token
     const notNeedToken = notTokenPaths.some(item => {
       return item.test(config.url);
     });
+    //不需要校验token
     if (notNeedToken) {
-      //不需要校验token
       return config;
     }
+    //需要校验token的接口
     const token = storageLocal.getItem<string>("token");
     if (token) {
       const data = JSON.parse(token);
@@ -60,6 +66,11 @@ myAxios.interceptors.response.use(
   response => {
     //请求200
     NProgress.done(); // 关闭进度条动画
+    //外部接口返回
+    if (response.config.requestOutside) {
+      return response;
+    }
+    //内部接口返回
     const res = response.data;
     if (res.code === "ACK") {
       //接口调用成功
@@ -81,11 +92,16 @@ myAxios.interceptors.response.use(
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-const $get = <Q, P>(url: string, params: Q): Promise<P> => {
+const $get = <Q, P>(
+  url: string,
+  params: Q,
+  config: customAxiosConfig = {}
+): Promise<P> => {
   return new Promise((resolve, reject) => {
     myAxios
       .get(url, {
-        params: params
+        params,
+        ...config
       })
       .then(res => {
         resolve(res.data);
@@ -100,10 +116,16 @@ const $get = <Q, P>(url: string, params: Q): Promise<P> => {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
-const $post = <Q, P>(url: string, params: Q): Promise<P> => {
+const $post = <Q, P>(
+  url: string,
+  params: Q,
+  config: customAxiosConfig = {}
+): Promise<P> => {
   return new Promise((resolve, reject) => {
     myAxios
-      .post(url, params) //是将对象 序列化成URL的形式，以&进行拼接
+      .post(url, params, {
+        ...config
+      })
       .then(res => {
         resolve(res.data);
       })

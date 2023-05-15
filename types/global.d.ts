@@ -139,4 +139,9 @@ declare global {
   declare interface RecordAnyForList extends recordAny {
     id: number | string;
   }
+
+  //自定义拓展axios config 的类型
+  declare interface customAxiosConfig {
+    requestOutside?: boolean;
+  }
 }
