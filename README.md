@@ -52,6 +52,8 @@
 
 首页
 
+<img src="https://thumbnail0.baidupcs.com/thumbnail/026bdd7bdp84cd0d28274bb6abf02cff?fid=936677304-250528-378788464162644&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZS4Mjkii3F8ePWjt7av00pqtPcc%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image"/>
+
 <img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic1.png"/>
 
 实时天气
