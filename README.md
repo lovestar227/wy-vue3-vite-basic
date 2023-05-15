@@ -50,8 +50,6 @@
 
 # 预览
 
-<img src="https://gitee.com/little-star227/wy-data-warehouse/blob/master/wy-vue3-vite-basic1.png"/>
-
 # 环境
 
 - node 16.X
