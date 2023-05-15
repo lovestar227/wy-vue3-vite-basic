@@ -38,15 +38,19 @@
 
 - [图标](#图标)
 
-- 随心所欲的配置主题色
+- [随心所欲的配置主题色](https://little-star227.gitee.io/wy-vue3-vite-basic/#/theme)
 
-- 一键即用的明暗模式
+- [一键即用的明暗模式](https://little-star227.gitee.io/wy-vue3-vite-basic-docs/component/WyDarkToogle.html)
 
-- 使用场景多的通用组件
+- [通用组件](https://little-star227.gitee.io/wy-vue3-vite-basic-docs/component/WySwitch.html)
 
 - [开发计划](#开发计划)
 
 - [欢迎](#欢迎)
+
+# 预览
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/blob/master/wy-vue3-vite-basic1.png"/>
 
 # 环境
 
