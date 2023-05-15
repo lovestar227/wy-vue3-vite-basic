@@ -12,6 +12,7 @@ import { useLayoutHook } from "../../hooks/useLayout";
 import OpenBtn from "../OpenBtn/OpenBtn.vue";
 import Breadcrumb from "./Breadcrumb.vue";
 import ScreenFull from "./ScreenFull.vue";
+import SimpleWeather from "./SimpleWeather.vue";
 
 defineOptions({
   name: "Navbar"
@@ -83,6 +84,9 @@ const getOpenBtnStyle = {
 
     <!-- 右侧功能按钮 -->
     <div class="vertical-header-right">
+      <!-- 天气 -->
+      <SimpleWeather></SimpleWeather>
+
       <!-- 全屏 -->
       <ScreenFull v-if="showScreenFull" />
       <!-- 国际化 -->
@@ -132,7 +136,7 @@ const getOpenBtnStyle = {
       <!-- 切换明暗模式 -->
       <WyDarkToogle v-if="showDarkToogle"></WyDarkToogle>
 
-      <!-- 退出登录 -->
+      <!-- 用户 -->
       <el-dropdown trigger="click">
         <span class="user-box">
           <!-- 头像 -->
@@ -142,6 +146,7 @@ const getOpenBtnStyle = {
         </span>
         <template #dropdown>
           <el-dropdown-menu class="logout">
+            <!-- 退出系统 -->
             <el-dropdown-item @click="logout">
               <icon-ep-back style="margin-right: 5px" />
               {{ $t("buttons.loginOut") }}

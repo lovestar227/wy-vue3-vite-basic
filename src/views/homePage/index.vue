@@ -165,8 +165,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-@use "/@/style/keyframes.scss";
-
 .home-page {
   height: 100%;
 
