@@ -184,6 +184,4 @@ $t("menu.homePage");
 
 2. 继续集成主流技术
 
-# 欢迎
-
 <h1 align="center">欢迎提Issues</h1>
