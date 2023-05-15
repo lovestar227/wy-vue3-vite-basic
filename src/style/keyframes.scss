@@ -6,3 +6,17 @@
     opacity: 1;
   }
 }
+
+@keyframes rotate-always {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+//loading 循环自旋转动画
+.loading-rotate {
+  animation: rotate-always 1s linear infinite;
+}

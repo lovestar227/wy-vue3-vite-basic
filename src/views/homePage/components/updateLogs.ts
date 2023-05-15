@@ -1,5 +1,15 @@
 export const logList = [
   {
+    version: "v1.0.3",
+    items: [
+      "1.修改开发环境的基础路径为/wy-vue3-vite-basic",
+      "2.增加实时天气功能，使用心知天气API获取数据包括实时天气、逐日预报、生活指数，PC只能通过IP精确到城市",
+      "3.stylelint 允许 :global",
+      "4.修改axios配置，支持访问外部接口",
+      "5.增加外部接口-根据IP获取位置、经纬度（精确到城市）"
+    ]
+  },
+  {
     version: "v1.0.2",
     items: [
       "1.docs: 修改README，增加gitee仓库挂件",
