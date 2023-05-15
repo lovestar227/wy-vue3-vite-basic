@@ -28,6 +28,28 @@
 
 - 学习更多技术。
 
+# 预览
+
+首页
+
+<img src="https://thumbnail0.baidupcs.com/thumbnail/026bdd7bdp84cd0d28274bb6abf02cff?fid=936677304-250528-378788464162644&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZS4Mjkii3F8ePWjt7av00pqtPcc%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image"/>
+
+实时天气
+
+<img src="https://thumbnail0.baidupcs.com/thumbnail/407ed30eco0959001f5816fa08897225?fid=936677304-250528-127965096981791&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-d9sco%2f8h6YqgJIVLVf4N20%2faTko%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image"/>
+
+主题
+
+<img src="https://thumbnail0.baidupcs.com/thumbnail/ca97a6258k39c44221c96ac28179f2af?fid=936677304-250528-1015308519690737&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-TUZmJsT%2bbLc7vdKqn0WlREtQXaA%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image"/>
+
+图标
+
+<img src="https://thumbnail0.baidupcs.com/thumbnail/fd4c61564n8cae17f891525e56e5e7cf?fid=936677304-250528-803509229020670&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-r6eRmqsoAHXWOOJXQQA60t8Yq8U%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image" />
+
+通用组件
+
+<img src="https://thumbnail0.baidupcs.com/thumbnail/acd76f0e7g239145d124ec284f93327d?fid=936677304-250528-364678419460333&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-oxHkpE4zrQ%2buiXWiSBTEZbFdoUA%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8894489674394571357&dp-callid=0&time=1684159200&size=c1999_u1999&quality=100&vuk=936677304&ft=image" />
+
 # 目录
 
 - [环境](#环境)
