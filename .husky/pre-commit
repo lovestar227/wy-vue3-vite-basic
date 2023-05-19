@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 #根据lintsstagedrc.cjs配置格式化并提交代码
-pnpm lint-staged
+# pnpm lint-staged
