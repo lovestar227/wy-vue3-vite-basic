@@ -1,0 +1,9 @@
+@charset "UTF-8";
+[data-v-c28b1dd2]:root {
+  --color-theme-main-color: #4091f7;
+  --color-theme-hover-color: #ecf5ff;
+}
+.charts-page .chart-item[data-v-c28b1dd2] .wy-echarts {
+  width: 100%;
+  height: 300px;
+}

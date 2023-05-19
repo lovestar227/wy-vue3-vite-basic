@@ -1,0 +1,562 @@
+import {
+  f as m,
+  x as I,
+  aq as T,
+  ar as U,
+  o,
+  B as _,
+  H as x,
+  I as $,
+  O as r,
+  G as L,
+  U as F,
+  V as S,
+  D as t,
+  W as B,
+  r as A,
+  a3 as V,
+  h as u,
+  J as b,
+  w as h,
+  R as E,
+  a0 as O,
+  a1 as P,
+  T as D,
+  S as N,
+  Q as H,
+  g as z,
+  C as G,
+  $ as q
+} from "./.pnpm-c4ae2d5d.js";
+import { _ as v } from "./index-649cc330.js";
+import { _ as R } from "./WyIconFont.vue_vue_type_script_setup_true_lang-cb6e4f8d.js";
+import { u as J, h as Q, a as j } from "./user-e1c9ffd8.js";
+const K = { class: "wy-fan" },
+  X = { class: "hide-fan" },
+  Y = { class: "open-fan" },
+  Z = m({
+    name: "WyFan",
+    __name: "index",
+    props: { list: { default: () => [] }, defaultActive: { default: -1 } },
+    setup(s) {
+      const e = s,
+        a = I([]),
+        c = I(-1),
+        l = T(i => {
+          c.value > -1 && (a.value[c.value].open = !1),
+            (a.value[i].open = !0),
+            (c.value = i);
+        }, 500),
+        p = () => {
+          c.value > -1 && (a.value[c.value].open = !1), (c.value = -1);
+        };
+      return (
+        U(() => {
+          (a.value = e.list ? e.list : []),
+            e.defaultActive > -1 &&
+              e.defaultActive < a.value.length &&
+              ((a.value[e.defaultActive].open = !0),
+              (c.value = e.defaultActive));
+        }),
+        (i, d) => (
+          o(),
+          _("div", K, [
+            (o(!0),
+            _(
+              x,
+              null,
+              $(
+                r(a),
+                (n, f) => (
+                  o(),
+                  _(
+                    "div",
+                    {
+                      class: L([
+                        "wy-fan-item",
+                        [n.open ? "wy-fan-item-active" : "wy-fan-item-hide"]
+                      ]),
+                      key: n.id
+                    },
+                    [
+                      F(
+                        t(
+                          "div",
+                          X,
+                          [
+                            B(
+                              i.$slots,
+                              "hide-fan",
+                              {
+                                item: n,
+                                index: f,
+                                activeFanIndex: r(c),
+                                openFan: r(l)
+                              },
+                              void 0,
+                              !0
+                            )
+                          ],
+                          512
+                        ),
+                        [[S, !n.open]]
+                      ),
+                      F(
+                        t(
+                          "div",
+                          Y,
+                          [
+                            B(
+                              i.$slots,
+                              "open-fan",
+                              {
+                                item: n,
+                                index: f,
+                                activeFanIndex: r(c),
+                                closeFan: p
+                              },
+                              void 0,
+                              !0
+                            )
+                          ],
+                          512
+                        ),
+                        [[S, n.open]]
+                      )
+                    ],
+                    2
+                  )
+                )
+              ),
+              128
+            ))
+          ])
+        )
+      );
+    }
+  });
+const ee = v(Z, [["__scopeId", "data-v-efbe8f00"]]),
+  ne = { class: "home-imagine" },
+  te = m({
+    name: "Imagine",
+    __name: "Imagine",
+    setup(s) {
+      return (e, a) => (o(), _("div", ne, "建造中"));
+    }
+  });
+const oe = v(te, [["__scopeId", "data-v-9bbb20e6"]]),
+  se = s => (O("data-v-c65e73c2"), (s = s()), P(), s),
+  ae = { class: "home-origin" },
+  ce = { class: "open-fan-header" },
+  ie = { class: "open-fan-header-left" },
+  _e = { class: "open-fan-header-right" },
+  le = se(() => t("div", { class: "open-fan-body" }, "建造中", -1)),
+  de = { class: "open-fan-footer" },
+  re = { class: "poem-box" },
+  pe = m({
+    name: "Origin",
+    __name: "Origin",
+    props: {
+      index: {},
+      item: {},
+      activeFanIndex: {},
+      closeFan: {},
+      showFanBagImage: {}
+    },
+    setup(s) {
+      const e = s;
+      return (a, c) => {
+        const l = R,
+          p = A("el-button"),
+          i = V("motion-fade");
+        return (
+          o(),
+          _("div", ae, [
+            t("header", ce, [
+              t("div", ie, [
+                F(
+                  u(
+                    l,
+                    {
+                      icon: e.item.icon,
+                      svg: "",
+                      class: "open-fan-header-icon"
+                    },
+                    null,
+                    8,
+                    ["icon"]
+                  ),
+                  [[i]]
+                ),
+                t("span", null, b(e.item.title), 1)
+              ]),
+              t("div", _e, [
+                u(
+                  p,
+                  {
+                    class: "right-close-btn",
+                    onClick:
+                      c[0] ||
+                      (c[0] = () => {
+                        e.showFanBagImage(e.index, e.activeFanIndex),
+                          e.closeFan();
+                      })
+                  },
+                  { default: h(() => [E("关闭")]), _: 1 }
+                )
+              ])
+            ]),
+            le,
+            t("footer", de, [
+              t("div", re, [
+                (o(!0),
+                _(
+                  x,
+                  null,
+                  $(
+                    e.item.poems,
+                    (d, n) => (
+                      o(), _("span", { class: "poem-item", key: n }, b(d), 1)
+                    )
+                  ),
+                  128
+                ))
+              ])
+            ])
+          ])
+        );
+      };
+    }
+  });
+const ue = v(pe, [["__scopeId", "data-v-c65e73c2"]]),
+  me = { class: "home-run" },
+  ve = m({
+    name: "Run",
+    __name: "Run",
+    setup(s) {
+      return (e, a) => (o(), _("div", me, "建造中"));
+    }
+  });
+const fe = v(ve, [["__scopeId", "data-v-bbb8abdc"]]),
+  ge = { class: "home-study" },
+  he = m({
+    name: "Study",
+    __name: "Study",
+    setup(s) {
+      return (e, a) => (o(), _("div", ge, "建造中"));
+    }
+  });
+const ye = v(he, [["__scopeId", "data-v-049e06b8"]]),
+  W = [
+    {
+      version: "v1.1.0",
+      items: [
+        "1.refactor: vue3.3新特性",
+        "2.defineEmits更简洁的具名元组语法",
+        "3.defineOptions支持,无需借助unplugin-vue-macros插件",
+        "4.增加defineSlots定义组件插槽",
+        "docs:README增加gitee托管的项目图片"
+      ]
+    },
+    {
+      version: "v1.0.3",
+      items: [
+        "1.修改开发环境的基础路径为/wy-vue3-vite-basic",
+        "2.增加实时天气功能，使用心知天气API获取数据包括实时天气、逐日预报、生活指数，PC只能通过IP精确到城市",
+        "3.stylelint 允许 :global",
+        "4.修改axios配置，支持访问外部接口",
+        "5.增加外部接口-根据IP获取位置、经纬度（精确到城市）"
+      ]
+    },
+    {
+      version: "v1.0.2",
+      items: [
+        "1.docs: 修改README，增加gitee仓库挂件",
+        "2.refactor: 提取更新日志到uplogs.ts"
+      ]
+    },
+    {
+      version: "v1.0.1",
+      items: [
+        "1.chore: 修改base路径，静态网站部署gitee",
+        "2.feat: 首页增加更新日志",
+        "3.fix: 修改默认主题色",
+        "3.fix: 预设颜色选择",
+        "4.feat: 还原默认主题色"
+      ]
+    },
+    {
+      version: "v1.0.0",
+      items: [
+        "1. 大版本1.0.0发布",
+        "2. 基础框架搭建完成",
+        "3. 集成vue-i18n、Element Plus、Echarts等",
+        "4. 图标使用iconfont、iconify",
+        "5. WyWitch 开关组件",
+        "6. WyDarkToogle 明暗模式切换开关",
+        "7. WyToolTip 自动判断文本是否溢出显示 tooltip 组件",
+        "8. WyPopoverList 悬浮列表组件",
+        "9. WyFan 扇子组件",
+        "10. WyIconFont iconfont组件",
+        "11. WyIconify iconify组件",
+        "12. 按钮自动loading Hook",
+        "13. 主题色功能",
+        "14. 404页面",
+        "15. 500页面"
+      ]
+    }
+  ],
+  be = s => (O("data-v-bdfc74dd"), (s = s()), P(), s),
+  Ie = { class: "home-updateLog" },
+  xe = { class: "log-list" },
+  $e = { class: "version" },
+  Fe = be(() => t("br", null, null, -1)),
+  Ae = m({
+    name: "UpdateLog",
+    __name: "UpdateLog",
+    setup(s) {
+      const e = [
+          "#C71A54",
+          "#F9AA17",
+          "#04E850",
+          "#31DAAD",
+          "#31BBDA",
+          "#317ADA",
+          "#3137DA",
+          "#7231DA",
+          "#C71AAA"
+        ],
+        a = l => ({ "background-color": e[l % 9] }),
+        c = l => ({ color: e[l % 9] });
+      return (l, p) => {
+        const i = A("el-scrollbar");
+        return (
+          o(),
+          _("div", Ie, [
+            t("div", xe, [
+              u(i, null, {
+                default: h(() => [
+                  (o(!0),
+                  _(
+                    x,
+                    null,
+                    $(
+                      r(W),
+                      (d, n) => (
+                        o(),
+                        _("div", { class: "log-item", key: d.version }, [
+                          t(
+                            "div",
+                            { class: "log-item-circle", style: D(a(n)) },
+                            null,
+                            4
+                          ),
+                          r(W).length > 1
+                            ? (o(),
+                              _(
+                                "div",
+                                {
+                                  key: 0,
+                                  class: "log-item-line",
+                                  style: D(a(n))
+                                },
+                                null,
+                                4
+                              ))
+                            : N("", !0),
+                          t(
+                            "div",
+                            { class: "log-item-message", style: D(c(n)) },
+                            [
+                              t("span", $e, " 版本：" + b(d.version), 1),
+                              (o(!0),
+                              _(
+                                x,
+                                null,
+                                $(
+                                  d.items,
+                                  (f, k) => (
+                                    o(), _("span", { key: k }, [E(b(f), 1), Fe])
+                                  )
+                                ),
+                                128
+                              ))
+                            ],
+                            4
+                          )
+                        ])
+                      )
+                    ),
+                    128
+                  ))
+                ]),
+                _: 1
+              })
+            ])
+          ])
+        );
+      };
+    }
+  });
+const ke = v(Ae, [["__scopeId", "data-v-bdfc74dd"]]),
+  we = { class: "home-page" },
+  Ce = { class: "fan-hide-item" },
+  De = ["onClick"],
+  Se = { class: "fan-item-title" },
+  Be = m({
+    name: "HomePage",
+    __name: "index",
+    setup(s) {
+      const e = I([
+          {
+            id: 1,
+            icon: "icon-food-pistachio",
+            open: !1,
+            title: "起点",
+            poems: [
+              "合抱之木",
+              "生于毫末",
+              "九层之台",
+              "起于垒土",
+              "千里之行",
+              "始于足下"
+            ]
+          },
+          { id: 2, icon: "icon-food-strawberry", open: !1, title: "过程" },
+          { id: 3, icon: "icon-food-popcorn", open: !1, title: "学习" },
+          { id: 4, icon: "icon-food-pecan", open: !1, title: "奔跑" },
+          { id: 5, icon: "icon-food-eggyolkcake", open: !1, title: "想象" }
+        ]),
+        a = q(),
+        c = i => {
+          switch (i.id) {
+            case 1:
+              return ue;
+            case 2:
+              return ke;
+            case 3:
+              return ye;
+            case 4:
+              return fe;
+            case 5:
+              return oe;
+          }
+        },
+        l = (i, d) => {
+          if (d > -1) {
+            const n = a.refs["fan-item-bagImage" + d];
+            n && !Q(n, "fan-item-opacity-in") && j(n, "fan-item-opacity-in");
+          }
+        },
+        p = I(!0);
+      return (
+        H(() => {
+          const i = new Image();
+          (i.onload = () => {
+            p.value = !1;
+          }),
+            (i.src = J);
+        }),
+        (i, d) => {
+          const n = R,
+            f = A("el-skeleton-item"),
+            k = A("el-skeleton"),
+            M = ee;
+          return (
+            o(),
+            _("div", we, [
+              u(
+                M,
+                { list: r(e), "default-active": 1 },
+                {
+                  "hide-fan": h(
+                    ({ item: g, index: y, activeFanIndex: w, openFan: C }) => [
+                      t("div", Ce, [
+                        t(
+                          "div",
+                          {
+                            class: "fan-item-open-btn",
+                            onClick: () => {
+                              l(y, w), C(y);
+                            }
+                          },
+                          [
+                            u(
+                              n,
+                              { icon: g.icon, svg: "", class: "open-btn-icon" },
+                              null,
+                              8,
+                              ["icon"]
+                            )
+                          ],
+                          8,
+                          De
+                        ),
+                        t("div", Se, b(g.title), 1),
+                        u(
+                          k,
+                          {
+                            loading: r(p),
+                            animated: "",
+                            class: "fan-item-bagImage"
+                          },
+                          {
+                            template: h(() => [
+                              u(f, {
+                                variant: "image",
+                                style: "width: 100%; height: 100%"
+                              })
+                            ]),
+                            default: h(() => [
+                              F(
+                                t(
+                                  "div",
+                                  {
+                                    class: L(["fan-item-bagImage"]),
+                                    ref: "fan-item-bagImage" + y
+                                  },
+                                  null,
+                                  512
+                                ),
+                                [[S, !g.open]]
+                              )
+                            ]),
+                            _: 2
+                          },
+                          1032,
+                          ["loading"]
+                        )
+                      ])
+                    ]
+                  ),
+                  "open-fan": h(
+                    ({ item: g, index: y, activeFanIndex: w, closeFan: C }) => [
+                      (o(),
+                      z(
+                        G(c(g)),
+                        {
+                          item: g,
+                          index: y,
+                          activeFanIndex: w,
+                          closeFan: C,
+                          showFanBagImage: l
+                        },
+                        null,
+                        8,
+                        ["item", "index", "activeFanIndex", "closeFan"]
+                      ))
+                    ]
+                  ),
+                  _: 1
+                },
+                8,
+                ["list"]
+              )
+            ])
+          );
+        }
+      );
+    }
+  });
+const Pe = v(Be, [["__scopeId", "data-v-d0614d69"]]);
+export { Pe as default };
