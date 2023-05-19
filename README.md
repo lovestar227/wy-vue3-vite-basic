@@ -28,6 +28,28 @@
 
 - 学习更多技术。
 
+# 预览
+
+首页
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic1.png"/>
+
+实时天气
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic2.png"/>
+
+主题
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic3.png"/>
+
+图标
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic4.png"/>
+
+通用组件
+
+<img src="https://gitee.com/little-star227/wy-data-warehouse/raw/master/wy-vue3-vite-basic5.png"/>
+
 # 目录
 
 - [环境](#环境)
@@ -161,7 +183,5 @@ $t("menu.homePage");
 1. 完善项目
 
 2. 继续集成主流技术
-
-# 欢迎
 
 <h1 align="center">欢迎提Issues</h1>

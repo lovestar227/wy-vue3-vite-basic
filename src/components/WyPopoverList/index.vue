@@ -12,6 +12,14 @@ defineOptions({
   name: "WyPopoverList"
 });
 
+defineSlots<{
+  reference: (props: { result: any }) => any;
+  header: (props: { hidePopover: () => void }) => any;
+  default: (props: { hidePopover: () => void }) => any;
+  "list-item": (props: { item: any }) => any;
+  footer: (props: { hidePopover: () => void }) => any;
+}>();
+
 interface Props {
   list?: any[];
   poppverClass?: string;
@@ -81,7 +89,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 /* emit */
 const emit = defineEmits<{
-  (e: "update:modelValue", v: any): void;
+  "update:modelValue": [v: any];
 }>();
 
 //popover Ref

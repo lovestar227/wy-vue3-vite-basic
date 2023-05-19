@@ -10,7 +10,7 @@ interface Props {
 const props = defineProps<Props>();
 
 const emit = defineEmits<{
-  (e: "toggleClick"): void;
+  toggleClick: [];
 }>();
 /**
  * 点击切换侧边栏状态按钮

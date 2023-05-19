@@ -1,5 +1,15 @@
 export const logList = [
   {
+    version: "v1.1.0",
+    items: [
+      "1.refactor: vue3.3新特性",
+      "2.defineEmits更简洁的具名元组语法",
+      "3.defineOptions支持,无需借助unplugin-vue-macros插件",
+      "4.增加defineSlots定义组件插槽",
+      "docs:README增加gitee托管的项目图片"
+    ]
+  },
+  {
     version: "v1.0.3",
     items: [
       "1.修改开发环境的基础路径为/wy-vue3-vite-basic",

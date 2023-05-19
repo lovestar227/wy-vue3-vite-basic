@@ -11,7 +11,6 @@ import IconsResolver from "unplugin-icons/resolver";
 import Icons from "unplugin-icons/vite";
 // import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
-import VueMacros from "unplugin-vue-macros/dist/vite";
 import viteEslint from "vite-plugin-eslint";
 import { viteMockServe } from "vite-plugin-mock";
 import removeConsole from "vite-plugin-remove-console";
@@ -35,15 +34,10 @@ export function pluginsConfig(
   VITE_MOCK
 ) {
   return [
-    //内置DefineOptions 方便定义组件的名字
-    VueMacros({
-      plugins: {
-        //Vue支持
-        vue: Vue()
-        // jsx、tsx语法支持
-        // vueJsx: VueJsx()
-      }
-    }),
+    //Vue支持
+    Vue(),
+    // jsx、tsx语法支持
+    // vueJsx: VueJsx()
     //国际化
     VueI18nPlugin({
       runtimeOnly: true,
