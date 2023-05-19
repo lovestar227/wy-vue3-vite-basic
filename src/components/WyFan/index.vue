@@ -1,9 +1,24 @@
 <script setup lang="ts">
-import { throttle } from "lodash-unified";
+import { DebouncedFunc, throttle } from "lodash-unified";
 
 defineOptions({
   name: "WyFan"
 });
+
+defineSlots<{
+  "hide-fan": (props: {
+    item: FanItem;
+    index: number;
+    activeFanIndex: number;
+    openFan: DebouncedFunc<(index: number) => void>;
+  }) => any;
+  "open-fan": (props: {
+    item: FanItem;
+    index: number;
+    activeFanIndex: number;
+    closeFan: () => void;
+  }) => any;
+}>();
 interface FanItem extends RecordAnyForList {
   id: string | number;
   open: boolean;

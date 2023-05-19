@@ -43,12 +43,7 @@
       "/@/*": ["src/*"]
     },
     //需要包含的类型声明文件名列表
-    "types": [
-      "node",
-      "vite/client",
-      "element-plus/global",
-      "unplugin-vue-macros/macros-global"
-    ],
+    "types": ["node", "vite/client", "element-plus/global"],
     //包含类型声明的文件列表
     "typeRoots": ["./node_modules/@types/", "./types"],
 
@@ -71,7 +66,6 @@
   ],
   "exclude": ["node_modules", "dist", "**/*.js"],
   "vueCompilerOptions": {
-    "target": 3,
-    "plugins": ["@vue-macros/volar/define-options"]
+    "target": 3
   }
 }

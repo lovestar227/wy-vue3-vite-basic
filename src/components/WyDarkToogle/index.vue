@@ -13,7 +13,7 @@ defineOptions({
 });
 
 const emit = defineEmits<{
-  (e: "change", v: boolean): void;
+  change: [v: boolean];
 }>();
 
 /**

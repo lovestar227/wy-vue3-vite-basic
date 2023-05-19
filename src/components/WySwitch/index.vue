@@ -10,8 +10,8 @@ defineOptions({
 });
 
 const emit = defineEmits<{
-  (e: "update:modelValue", v: boolean): void;
-  (e: "change", v: boolean): void;
+  "update:modelValue": [v: boolean];
+  change: [v: boolean];
 }>();
 
 interface Props {

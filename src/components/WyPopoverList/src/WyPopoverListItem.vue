@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 /* emit */
 const emit = defineEmits<{
-  (e: "update", v: any): void;
+  update: [v: any];
 }>();
 
 /* 单项容器显示的文本 */
