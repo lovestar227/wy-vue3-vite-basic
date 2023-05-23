@@ -1,4 +1,6 @@
-const simplePieOptions = {
+import { ECOption } from "/@/plugins/WyEcharts/index";
+
+const simplePieOptions: ECOption = {
   tooltip: {
     trigger: "item"
   },

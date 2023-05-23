@@ -8,6 +8,7 @@ menus:
   themePage: Theme Color
   iconsPage: Icons
   chartsPage: Charts
+  lineCharts: Line Charts
   listPage: List
   errorPage: Error Page
   '404': '404'

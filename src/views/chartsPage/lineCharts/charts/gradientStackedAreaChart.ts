@@ -1,6 +1,8 @@
 import * as echarts from "echarts";
 
-const gradientStackedAreaOptions = {
+import { ECOption } from "/@/plugins/WyEcharts/index";
+
+const gradientStackedAreaOptions: ECOption = {
   color: ["#80FFA5", "#00DDFF", "#37A2FF", "#FF0087", "#FFBF00"],
   title: {
     text: "Gradient Stacked Area Chart"
