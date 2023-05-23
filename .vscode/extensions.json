@@ -19,6 +19,7 @@
     "vue.vscode-typescript-vue-plugin",
     "antfu.unocss",
     "Vue.volar",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "mariusalchimavicius.json-to-ts"
   ]
 }
