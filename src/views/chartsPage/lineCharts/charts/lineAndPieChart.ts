@@ -1,6 +1,6 @@
 import { ECOption } from "/@/plugins/WyEcharts/index";
 
-const lineAndPieChart: ECOption = {
+const lineAndPieOption: ECOption = {
   legend: {},
   tooltip: {
     trigger: "axis",
@@ -103,4 +103,4 @@ const lineAndPieChart: ECOption = {
   ]
 };
 
-export default lineAndPieChart;
+export default lineAndPieOption;

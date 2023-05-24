@@ -3,8 +3,9 @@ import { DatasetOption } from "echarts/types/dist/shared";
 
 import WyEcharts, { WyEchartsAPI } from "/@/plugins/WyEcharts/index.vue";
 
-import gradientStackedAreaOptions from "./charts/gradientStackedAreaChart";
-import lineAndPieChart from "./charts/lineAndPieChart";
+import gradientStackedAreaOption from "./charts/gradientStackedAreaChart";
+import lineAndPieOption from "./charts/lineAndPieChart";
+import temperatureChartOption from "./charts/temperatureChart";
 import { updateAxisPointerType } from "./type";
 
 defineOptions({
@@ -12,7 +13,8 @@ defineOptions({
 });
 
 /* 图表 ref */
-const chart1 = ref<WyEchartsAPI | undefined>(null);
+const gradientStackedAreaChart = ref<WyEchartsAPI | undefined>(null);
+const temperatureChartRef = ref<WyEchartsAPI | undefined>(null);
 const lineAndPieChartRef = ref<WyEchartsAPI | undefined>(null);
 
 const lineAndPieSorce = [
@@ -23,7 +25,7 @@ const lineAndPieSorce = [
   ["Walnut Brownie", 25.2, 37.1, 41.2, 18, 33.9, 49.1]
 ];
 
-(lineAndPieChart.dataset as DatasetOption).source = lineAndPieSorce;
+(lineAndPieOption.dataset as DatasetOption).source = lineAndPieSorce;
 
 onMounted(() => {
   //联动和共享数据集 折线图联动饼图
@@ -69,8 +71,17 @@ onMounted(() => {
     <div class="chart-item">
       <el-card header="联动和共享数据集">
         <WyEcharts
-          :options="lineAndPieChart"
+          :options="lineAndPieOption"
           ref="lineAndPieChartRef"
+        ></WyEcharts>
+      </el-card>
+    </div>
+
+    <div class="chart-item">
+      <el-card header="逐日预报温度">
+        <WyEcharts
+          :options="temperatureChartOption"
+          ref="temperatureChartRef"
         ></WyEcharts>
       </el-card>
     </div>
@@ -78,8 +89,8 @@ onMounted(() => {
     <div class="chart-item">
       <el-card header="渐变堆积图">
         <WyEcharts
-          :options="gradientStackedAreaOptions"
-          ref="chart1"
+          :options="gradientStackedAreaOption"
+          ref="gradientStackedAreaChart"
         ></WyEcharts>
       </el-card>
     </div>
