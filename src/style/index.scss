@@ -1,9 +1,12 @@
-// 全局样式设置
+/*
+* 全局样式设置
+*/
 
-//element plus 全局样式
+//element plus全局样式
 @use "./elStyle.scss";
-//各popover 样式
+//各popover样式
 @use "./popover.scss";
+//主题色样式
 @use "./theme.scss" as *;
 //全局动画样式
 @use "keyframes.scss";
@@ -49,14 +52,4 @@ a:hover {
 
 .wy-icon {
   outline: none;
-}
-
-/* element-ui 虚拟滚动条样式 */
-.el-scrollbar .el-scrollbar__bar.is-vertical .el-scrollbar__thumb {
-  background-color: $main-color;
-
-  &:hover {
-    background-color: $main-color;
-    opacity: var(--el-scrollbar-hover-opacity, 0.5);
-  }
 }
