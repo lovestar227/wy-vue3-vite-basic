@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { DatasetOption } from "echarts/types/dist/shared";
+import { debounce } from "lodash-unified";
 
 import WyEcharts, { WyEchartsAPI } from "/@/plugins/WyEcharts/index.vue";
 
 import gradientStackedAreaOption from "./charts/gradientStackedAreaChart";
 import lineAndPieOption from "./charts/lineAndPieChart";
-import temperatureChartOption from "./charts/temperatureChart";
+import { getTemperatureChart } from "./charts/temperatureChart";
 import { updateAxisPointerType } from "./type";
 
 defineOptions({
@@ -17,6 +18,7 @@ const gradientStackedAreaChart = ref<WyEchartsAPI | undefined>(null);
 const temperatureChartRef = ref<WyEchartsAPI | undefined>(null);
 const lineAndPieChartRef = ref<WyEchartsAPI | undefined>(null);
 
+/* 联动和共享数据集 */
 const lineAndPieSorce = [
   ["product", "2012", "2013", "2014", "2015", "2016", "2017"],
   ["Milk Tea", 56.5, 82.1, 88.7, 70.1, 53.4, 85.1],
@@ -26,6 +28,27 @@ const lineAndPieSorce = [
 ];
 
 (lineAndPieOption.dataset as DatasetOption).source = lineAndPieSorce;
+
+/* N天温度图 */
+const temperatureDays = ref(30);
+const temperaturePercent = ref(0.2);
+const temperatureChartOption = ref(
+  getTemperatureChart(temperatureDays.value, temperaturePercent.value)
+);
+
+const percentOptions = new Array(11).fill(0).map((item, index) => {
+  if (index == 0) return { label: "0", value: 0 };
+  return { label: "" + index / 10, value: index / 10 };
+});
+/**
+ * 取一组新数据渲染图表
+ */
+const updatePercentOptions = debounce(() => {
+  temperatureChartOption.value = getTemperatureChart(
+    temperatureDays.value,
+    temperaturePercent.value
+  );
+}, 0.5);
 
 onMounted(() => {
   //联动和共享数据集 折线图联动饼图
@@ -69,19 +92,49 @@ onMounted(() => {
 <template>
   <div class="charts-page">
     <div class="chart-item">
-      <el-card header="联动和共享数据集">
+      <el-card>
+        <template #header>
+          <div class="chart-card-header">
+            {{ "未来" + temperatureDays + "天温度图" }}
+            <div calss="flex">
+              天数：
+              <el-input
+                v-model="temperatureDays"
+                style="margin-right: 20px; width: 80px"
+                @change="updatePercentOptions"
+              ></el-input>
+              稍高温/低温百分比：
+              <el-select
+                v-model="temperaturePercent"
+                class="m-2"
+                style="width: 80px"
+                @change="updatePercentOptions"
+              >
+                <el-option
+                  v-for="item in percentOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                />
+              </el-select>
+              <el-button @click="updatePercentOptions" type="primary">
+                换一组数据
+              </el-button>
+            </div>
+          </div>
+        </template>
         <WyEcharts
-          :options="lineAndPieOption"
-          ref="lineAndPieChartRef"
+          :options="temperatureChartOption"
+          ref="temperatureChartRef"
         ></WyEcharts>
       </el-card>
     </div>
 
     <div class="chart-item">
-      <el-card header="逐日预报温度">
+      <el-card header="联动和共享数据集">
         <WyEcharts
-          :options="temperatureChartOption"
-          ref="temperatureChartRef"
+          :options="lineAndPieOption"
+          ref="lineAndPieChartRef"
         ></WyEcharts>
       </el-card>
     </div>
@@ -105,6 +158,11 @@ onMounted(() => {
     :deep(.wy-echarts) {
       width: 100%;
       height: 300px;
+    }
+    .chart-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }
