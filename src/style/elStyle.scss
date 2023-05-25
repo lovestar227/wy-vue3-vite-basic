@@ -1,4 +1,6 @@
-// element plus 相关覆盖样式
+/*
+* element plus 相关覆盖样式
+*/
 @use "./theme.scss" as *;
 
 body {
@@ -159,6 +161,24 @@ body {
 
     svg {
       display: none;
+    }
+  }
+
+  /* element-ui 虚拟滚动条样式 */
+  .el-scrollbar .el-scrollbar__bar.is-vertical .el-scrollbar__thumb {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $main-color;
+      opacity: var(--el-scrollbar-hover-opacity, 0.5);
+    }
+  }
+
+  /* el-button 按钮*/
+  .el-button {
+    &:focus {
+      border-color: var(--el-button-border-color);
+      background-color: var(--el-button-bg-color);
     }
   }
 }
