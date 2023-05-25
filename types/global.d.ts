@@ -120,8 +120,18 @@ declare global {
   declare interface themeColorType {
     //主色
     mainColor?: string;
-    //鼠标悬浮色
-    hoverColor?: string;
+    //主色-变亮30%
+    mainColorLight3?: string;
+    //主色-变亮50%
+    mainColorLight5?: string;
+    //主色-变亮70%
+    mainColorLight7?: string;
+    //主色-变亮80%
+    mainColorLight8?: string;
+    //主色-变亮90%
+    mainColorLight9?: string;
+    //主色-变暗20%
+    mainColorDark2?: string;
   }
 
   /**
