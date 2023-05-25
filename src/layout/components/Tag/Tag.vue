@@ -331,10 +331,12 @@ function closeAllTag() {
 
 <style lang="scss" scoped>
 .header-tag-main {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 100%;
   height: 40px;
-  box-shadow: 0 0 1px #888;
+  box-shadow: 1px 0 1px #888;
 
   .tag-box-left,
   .tag-box-right {

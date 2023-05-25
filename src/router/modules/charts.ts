@@ -5,13 +5,23 @@ import { $$t } from "/@/plugins/i18n";
 const chartsRouter: WYRouterUseType = {
   path: "/charts",
   name: "ChartsPage",
-  component: () => import("/@/views/chartsPage/index.vue"),
+  redirect: "/charts/lineCharts",
   meta: {
     icon: "ep:odometer",
-    title: $$t("menus.chartsPage"),
-    keepAlive: true,
-    scrollTop: true,
-    componentName: "ChartsPage"
-  }
+    title: $$t("menus.chartsPage")
+  },
+  children: [
+    {
+      path: "/charts/lineCharts",
+      name: "LineCharts",
+      component: () => import("/@/views/chartsPage/lineCharts/index.vue"),
+      meta: {
+        title: $$t("menus.lineCharts"),
+        keepAlive: true,
+        scrollTop: true,
+        componentName: "LineCharts"
+      }
+    }
+  ]
 };
 export default chartsRouter;

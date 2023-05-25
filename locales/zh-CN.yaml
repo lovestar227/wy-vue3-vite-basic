@@ -8,6 +8,7 @@ menus:
   themePage: 主题色
   iconsPage: 图标
   chartsPage: 图表
+  lineCharts: 折线图
   listPage: 列表
   errorPage: 错误页面
   '404': '404'
@@ -30,4 +31,4 @@ page:
     pageLoss: 页面丢了
   '500':
     pageError: 页面出错啦
-    
+
