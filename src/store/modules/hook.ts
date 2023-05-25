@@ -14,7 +14,12 @@ import { storageLocal } from "/@/utils";
  */
 const colorMap = new Map([
   ["mainColor", ["--color-theme-main-color"]],
-  ["hoverColor", ["--color-theme-hover-color"]]
+  ["mainColorLight3", ["--color-theme-main-color-light-3"]],
+  ["mainColorLight5", ["--color-theme-main-color-light-5"]],
+  ["mainColorLight7", ["--color-theme-main-color-light-7"]],
+  ["mainColorLight8", ["--color-theme-main-color-light-8"]],
+  ["mainColorLight9", ["--color-theme-main-color-light-9"]],
+  ["mainColorDark2", ["--color-theme-main-color-dark-2"]]
 ]);
 /**
  * 获取localStroge储存的主题色

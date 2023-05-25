@@ -7,7 +7,12 @@
   "sidebarIsOpen": true,
   "themeColor": {
     "mainColor": "#C71A54",
-    "hoverColor": "#f4d1dd"
+    "mainColorLight3": "#d85f87",
+    "mainColorLight5": "#e38daa",
+    "mainColorLight7": "#eebacc",
+    "mainColorLight8": "#f4d1dd",
+    "mainColorLight9": "#f9e8ee",
+    "mainColorDark2": "#9f1543"
   },
   "showScreenFull": true,
   "showDarkToogle": true
