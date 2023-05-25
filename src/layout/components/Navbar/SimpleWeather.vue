@@ -184,17 +184,12 @@ onMounted(() => {
   <div class="simple-weather" v-if="temperature">
     <!-- 获取天气loading -->
     <div class="weather-loading" v-if="weatherLoading">
-      <WyIconFont
-        icon="icon-loading"
-        svg
-        style="width: 30px; height: 30px"
-        class="loading-rotate"
-      />
+      <WyIconFont icon="icon-loading" svg class="loading-rotate" />
       获取天气中
     </div>
     <!-- 天气 -->
     <el-popover
-      v-if="!weatherLoading"
+      v-else
       ref="weatherPopoverRef"
       placement="bottom"
       trigger="click"
@@ -211,7 +206,10 @@ onMounted(() => {
             v-if="weather"
             class="now-weather-png"
           />
-          <span class="now-temperature">{{ temperature }}</span>
+          <span class="now-temperature">
+            <span>{{ temperature }}</span>
+            <span style="margin-left: 10px">{{ weather }}</span></span
+          >
         </div>
       </template>
 
@@ -359,15 +357,18 @@ onMounted(() => {
   .weather-loading {
     display: flex;
     align-items: center;
+    .loading-rotate {
+      width: 30px;
+      height: 30px;
+    }
     .wy-icon-svg {
       margin-right: 5px;
     }
   }
   .now-weather {
-    display: flex;
-    align-items: center;
     cursor: pointer;
     .now-weather-png {
+      vertical-align: middle;
       margin-right: 10px;
       width: 30px;
       height: 30px;
