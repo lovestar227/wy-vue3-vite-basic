@@ -1,6 +1,8 @@
 import * as echarts from "echarts";
 
-const gradientStackedAreaOptions = {
+import { ECOption } from "/@/plugins/WyEcharts/index";
+
+const gradientStackedAreaOption: ECOption = {
   color: ["#80FFA5", "#00DDFF", "#37A2FF", "#FF0087", "#FFBF00"],
   title: {
     text: "Gradient Stacked Area Chart"
@@ -31,6 +33,7 @@ const gradientStackedAreaOptions = {
   xAxis: [
     {
       type: "category",
+      //false-标签在刻度上,true-标签在两个刻度之间
       boundaryGap: false,
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     }
@@ -44,7 +47,9 @@ const gradientStackedAreaOptions = {
     {
       name: "Line 1",
       type: "line",
+      //数据堆叠，同个类目轴上系列配置相同的 stack 值可以堆叠放置。
       stack: "Total",
+      //是否平滑视觉引导线，默认不平滑，可以设置成 true 平滑显示，也可以设置为 0 到 1 的值，表示平滑程度。
       smooth: true,
       lineStyle: {
         width: 0
@@ -183,4 +188,4 @@ const gradientStackedAreaOptions = {
   ]
 };
 
-export default gradientStackedAreaOptions;
+export default gradientStackedAreaOption;

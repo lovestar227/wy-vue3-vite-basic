@@ -1,5 +1,13 @@
 export const logList = [
   {
+    version: "v1.1.1",
+    items: [
+      "1.fix: 修复侧边栏与标签栏阴影被遮挡的bug",
+      "2.feat：新增折线图",
+      "3.chore: 增加json快速转ts类型的辅助工具JSON to TS"
+    ]
+  },
+  {
     version: "v1.1.0",
     items: [
       "1.refactor: vue3.3新特性",

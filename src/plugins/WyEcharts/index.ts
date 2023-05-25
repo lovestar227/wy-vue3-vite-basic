@@ -210,7 +210,6 @@ import {
   //canvas 渲染器 复杂图表用canvas渲染性能更高
   // CanvasRenderer
 } from "echarts/renderers";
-import type { App } from "vue";
 
 const { registerTheme } = echarts;
 
@@ -247,8 +246,12 @@ echarts.use([
  * @description 自定义主题
  * @see {@link https://echarts.apache.org/zh/download-theme.html}
  */
-import chalkTheme from "./theme/chalk.json";
-registerTheme("ovilia-green", chalkTheme);
+import basicBlackTheme from "./theme/basic-black.json";
+import basicWriteTheme from "./theme/basic-write.json";
+import oviliaGreenTheme from "./theme/ovilia-green.json";
+registerTheme("basic-write", basicWriteTheme);
+registerTheme("basic-black", basicBlackTheme);
+registerTheme("ovilia-green", oviliaGreenTheme);
 
 /**
  * 在main.js中引入，app.use进行全局引入
