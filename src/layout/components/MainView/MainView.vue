@@ -36,7 +36,10 @@ watch(
   <div class="main-view">
     <router-view v-slot="{ Component, route }">
       <!-- 页面滚动条 -->
-      <el-scrollbar v-if="!route.meta?.fixedPage" ref="mainViewScrollBarRef">
+      <el-scrollbar
+        ref="mainViewScrollBarRef"
+        :view-class="route.meta?.fixedPage ? 'fixed-page' : ''"
+      >
         <!-- 置顶按钮 visibility-height：滚动多少距离出现-->
         <el-backtop
           target=".main-view .el-scrollbar__wrap"
@@ -51,15 +54,6 @@ watch(
           />
         </keep-alive>
       </el-scrollbar>
-      <div v-else class="fixed-page">
-        <keep-alive :include="cacheRouteList">
-          <component
-            :is="Component"
-            :key="route.fullPath"
-            class="main-content"
-          />
-        </keep-alive>
-      </div>
     </router-view>
   </div>
 </template>
@@ -72,7 +66,7 @@ watch(
     padding: 10px 20px;
   }
 
-  .fixed-page {
+  :deep(.fixed-page) {
     overflow: hidden;
     height: 100%;
   }
