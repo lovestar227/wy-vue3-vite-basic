@@ -58,7 +58,19 @@ $color-prefix: --color-;
   *主题色
 */
 $main-color: color(theme, main-color, false);
-$hover-color: color(theme, hover-color, false);
-$sidebar-item-background-color: #0f0303;
-$text-color-grey: #8b8585;
+$main-color-light-3: color(theme, main-color-light-3, false);
+$main-color-light-5: color(theme, main-color-light-5, false);
+$main-color-light-7: color(theme, main-color-light-7, false);
+$main-color-light-8: color(theme, main-color-light-8, false);
+$main-color-light-9: color(theme, main-color-light-9, false);
+$main-color-dark-2: color(theme, main-color-dark-2, false);
+
+/* 颜色别名 */
+//悬浮色
+$hover-color: $main-color-light-8;
+
+/* 其他颜色 */
+//黑色字体
 $text-color-black: #000;
+//灰色字体
+$text-color-grey: #8b8585;

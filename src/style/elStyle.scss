@@ -1,6 +1,17 @@
 // element plus 相关覆盖样式
 @use "./theme.scss" as *;
 
+/* 覆盖element-plus 主色变量*/
+:root {
+  --el-color-primary: var(--color-theme-main-color) !important;
+  --el-color-primary-light-3: var(--color-theme-main-color-light-3) !important;
+  --el-color-primary-light-5: var(--color-theme-main-color-light-5) !important;
+  --el-color-primary-light-7: var(--color-theme-main-color-light-7) !important;
+  --el-color-primary-light-8: var(--color-theme-main-color-light-8) !important;
+  --el-color-primary-light-9: var(--color-theme-main-color-light-9) !important;
+  --el-color-primary-dark-2: var(--color-theme-main-color-dark-2) !important;
+}
+
 body {
   /* 侧边栏 不折叠 */
   .open-sidebar {
