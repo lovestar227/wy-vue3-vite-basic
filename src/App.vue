@@ -5,6 +5,7 @@ import zhCn from "element-plus/lib/locale/lang/zh-cn";
 import { defineComponent } from "vue";
 
 import { appStore } from "./store/modules/app";
+import { themeStore } from "./store/modules/theme";
 
 export default defineComponent({
   name: "app",
@@ -16,6 +17,10 @@ export default defineComponent({
     currentLocale() {
       return appStore().locale === "en" ? en : zhCn;
     }
+  },
+  created() {
+    //初始化主题色
+    themeStore();
   }
 });
 </script>
