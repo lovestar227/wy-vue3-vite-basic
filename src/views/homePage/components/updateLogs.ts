@@ -1,5 +1,13 @@
 export const logList = [
   {
+    version: "v1.1.2",
+    items: [
+      "1.feat: 主题色应用-覆盖element plus 主题色",
+      "2.refactor: 优化fixedPage固定页面不出现滚动条",
+      "3.fix: 修改el button focus状态颜色保持和无状态一样"
+    ]
+  },
+  {
     version: "v1.1.1",
     items: [
       "1.fix: 修复侧边栏与标签栏阴影被遮挡的bug",
