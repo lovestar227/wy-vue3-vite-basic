@@ -32,7 +32,7 @@ const onlyOnce = ref(false);
 /* 菜单hover判断文本是否溢出来控制tooltip的显示 */
 function hoverMenu() {
   //是否只判断一次是否显示tooltip
-  if (onlyOnce.value || props.multipleJudgments) return;
+  if (onlyOnce.value && !props.multipleJudgments) return;
 
   nextTick(() => {
     const spanDom = textRef.value;

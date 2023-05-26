@@ -9,7 +9,7 @@ const props = defineProps({
 /**
  * 标题
  */
-const title = "WYJS";
+const title = "WYJSSSSSSSSSSSSSSSSSSS";
 /**
  * 标题样式
  */
