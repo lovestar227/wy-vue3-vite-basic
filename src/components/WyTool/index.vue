@@ -8,7 +8,7 @@
 import { nextTick, ref, withDefaults } from "vue";
 
 defineOptions({
-  name: "WyToolTip",
+  name: "WyTooltip",
   //禁用默认的组件 attribute 透传行为
   inheritAttrs: false
 });

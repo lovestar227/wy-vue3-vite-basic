@@ -8,7 +8,7 @@ declare module "vue" {
     WyIconify: typeof import("../src/components/WyIcon")["WyIconify"];
     WySwitch: typeof import("../src/components/WySwitch")["WySwitch"];
     WyDarkToogle: typeof import("../src/components/WyDarkToogle")["WyDarkToogle"];
-    WyToolTip: typeof import("../src/components/WyToolTip")["WyToolTip"];
+    WyTooltip: typeof import("../src/components/WyTooltip")["WyTooltip"];
     WyPopoverList: typeof import("../src/components/WyPopoverList")["WyPopoverList"];
     WyPopoverListItem: typeof import("../src/components/WyPopoverList")["WyPopoverListItem"];
     WyFan: typeof import("../src/components/WyFan")["WyFan"];

@@ -61,7 +61,7 @@ export const logList = [
       "4. 图标使用iconfont、iconify",
       "5. WySwitch 开关组件",
       "6. WyDarkToogle 明暗模式切换开关",
-      "7. WyToolTip 自动判断文本是否溢出显示 tooltip 组件",
+      "7. WyTooltip 自动判断文本是否溢出显示 tooltip 组件",
       "8. WyPopoverList 悬浮列表组件",
       "9. WyFan 扇子组件",
       "10. WyIconFont iconfont组件",

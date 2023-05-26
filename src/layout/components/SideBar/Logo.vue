@@ -48,8 +48,8 @@ const sidebarTitleStyle = {
         style="width: 35px; height: 35px"
       />
       <!-- 标题 -->
-      <wy-toolTip :text="title" :style="sidebarTitleStyle" multipleJudgments>
-      </wy-toolTip>
+      <wy-tooltip :text="title" :style="sidebarTitleStyle" multipleJudgments>
+      </wy-tooltip>
     </router-link>
   </div>
 </template>

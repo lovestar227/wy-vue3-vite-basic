@@ -39,12 +39,12 @@ const getNoDropdownStyle = computed((): CSSProperties => {
       <template #title>
         <div class="menu-text-box">
           <!-- 内容 -->
-          <wy-toolTip>
+          <wy-tooltip>
             <template #content>
               {{ $t(props.item.meta.title) }}
             </template>
             {{ $t(props.item.meta.title) }}
-          </wy-toolTip>
+          </wy-tooltip>
         </div>
       </template>
     </el-menu-item>
