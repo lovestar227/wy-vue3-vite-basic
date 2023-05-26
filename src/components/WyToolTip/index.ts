@@ -1,3 +1,1 @@
-import WyToolTip from "./index.vue";
-
-export { WyToolTip };
+export { default as WyToolTip } from "./index.vue";

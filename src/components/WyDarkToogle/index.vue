@@ -47,7 +47,7 @@ function changeDark(value: boolean) {
 </script>
 
 <template>
-  <WySwitch
+  <wy-switch
     :model-value="isDark"
     @change="changeDark"
     :style="wySwitchStyle"
@@ -60,7 +60,7 @@ function changeDark(value: boolean) {
     <template #close-circle>
       <sunny></sunny>
     </template>
-  </WySwitch>
+  </wy-switch>
 </template>
 
 <style lang="scss" scoped></style>

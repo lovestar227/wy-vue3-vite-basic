@@ -1,3 +1,1 @@
-import WyDarkToogle from "./index.vue";
-
-export { WyDarkToogle };
+export { default as WyDarkToogle } from "./index.vue";

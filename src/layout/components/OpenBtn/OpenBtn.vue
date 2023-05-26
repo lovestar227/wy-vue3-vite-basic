@@ -28,7 +28,7 @@ const toggleClick = () => {
       :content="!props.collapse ? '点击折叠' : '点击展开'"
     >
       <!-- 图标 -->
-      <WyIconify
+      <wy-iconify
         :icon="props.collapse ? 'ep:expand' : 'ep:fold'"
         class="collapse-icon"
         @click="toggleClick"

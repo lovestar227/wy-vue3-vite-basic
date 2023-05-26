@@ -1,3 +1,1 @@
-import WySwitch from "./index.vue";
-
-export { WySwitch };
+export { default as WySwitch } from "./index.vue";

@@ -16,5 +16,5 @@
 
   ```html
   <!-- 切换明暗模式 -->
-  <WyDarkToogle></WyDarkToogle>
+  <wy-dark-toogle></wy-dark-toogle>
   ```

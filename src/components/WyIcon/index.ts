@@ -1,4 +1,2 @@
-import WyIconFont from "./WyIconFont.vue";
-import WyIconify from "./WyIconify.vue";
-
-export { WyIconFont, WyIconify };
+export { default as WyIconFont } from "./WyIconFont.vue";
+export { default as WyIconify } from "./WyIconify.vue";

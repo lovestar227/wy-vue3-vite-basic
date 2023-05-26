@@ -1,3 +1,5 @@
+@use "./theme.scss" as *;
+
 @keyframes opacity-in {
   from {
     opacity: 0;
@@ -19,4 +21,20 @@
 //loading 循环自旋转动画
 .loading-rotate {
   animation: rotate-always 1s linear infinite;
+}
+
+//按钮点击波浪动画
+@keyframes wy-button-wave {
+  0% {
+    border-color: var(--el-button-border-color);
+    background-color: var(--el-button-bg-color);
+  }
+  50% {
+    box-shadow: 0 0 0 0 $main-color-light-3;
+  }
+  100% {
+    border-color: var(--el-button-hover-border-color);
+    background-color: var(--el-button-hover-bg-color);
+    box-shadow: 0 0 0 6px $main-color-light-9;
+  }
 }

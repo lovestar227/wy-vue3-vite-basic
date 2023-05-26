@@ -59,7 +59,7 @@ export const logList = [
       "2. 基础框架搭建完成",
       "3. 集成vue-i18n、Element Plus、Echarts等",
       "4. 图标使用iconfont、iconify",
-      "5. WyWitch 开关组件",
+      "5. WySwitch 开关组件",
       "6. WyDarkToogle 明暗模式切换开关",
       "7. WyToolTip 自动判断文本是否溢出显示 tooltip 组件",
       "8. WyPopoverList 悬浮列表组件",

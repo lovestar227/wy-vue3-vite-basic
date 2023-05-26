@@ -33,18 +33,18 @@ const getNoDropdownStyle = computed((): CSSProperties => {
     <el-menu-item :index="props.item.path" :style="getNoDropdownStyle">
       <!-- 菜单图标 -->
       <div class="sub-menu-icon" v-if="props.item.meta?.icon">
-        <WyIconify :icon="props.item.meta?.icon" />
+        <wy-iconify :icon="props.item.meta?.icon" />
       </div>
       <!-- 菜单名称 -->
       <template #title>
         <div class="menu-text-box">
           <!-- 内容 -->
-          <WyToolTip>
+          <wy-toolTip>
             <template #content>
               {{ $t(props.item.meta.title) }}
             </template>
             {{ $t(props.item.meta.title) }}
-          </WyToolTip>
+          </wy-toolTip>
         </div>
       </template>
     </el-menu-item>
@@ -54,15 +54,15 @@ const getNoDropdownStyle = computed((): CSSProperties => {
     <template #title>
       <!-- 图标 -->
       <div v-if="props.item.meta?.icon" class="sub-menu-icon">
-        <WyIconify :icon="props.item.meta?.icon" />
+        <wy-iconify :icon="props.item.meta?.icon" />
       </div>
       <!-- 内容 -->
-      <WyToolTip>
+      <wy-toolTip>
         <template #content>
           {{ $t(props.item.meta.title) }}
         </template>
         {{ $t(props.item.meta.title) }}
-      </WyToolTip>
+      </wy-toolTip>
     </template>
     <!-- 子菜单 -->
     <side-bar-item

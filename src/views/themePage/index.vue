@@ -144,7 +144,7 @@ const singleColorChange = (value: string, variable) => {
     </div>
     <div class="dark-content">
       <h1>切换明暗模式</h1>
-      <WyDarkToogle></WyDarkToogle>
+      <wy-dark-toogle></wy-dark-toogle>
     </div>
   </div>
 </template>

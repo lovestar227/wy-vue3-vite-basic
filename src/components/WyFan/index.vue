@@ -1,5 +1,7 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends FanItem">
 import { DebouncedFunc, throttle } from "lodash-unified";
+
+import type { FanItem } from "./types";
 
 defineOptions({
   name: "WyFan"
@@ -7,31 +9,28 @@ defineOptions({
 
 defineSlots<{
   "hide-fan": (props: {
-    item: FanItem;
+    item: T;
     index: number;
     activeFanIndex: number;
     openFan: DebouncedFunc<(index: number) => void>;
   }) => any;
   "open-fan": (props: {
-    item: FanItem;
+    item: T;
     index: number;
     activeFanIndex: number;
     closeFan: () => void;
   }) => any;
 }>();
-interface FanItem extends RecordAnyForList {
-  id: string | number;
-  open: boolean;
-}
+
 interface Props {
-  list: FanItem[];
+  list: T[];
   defaultActive: number;
 }
 const props = withDefaults(defineProps<Props>(), {
   list: () => [],
   defaultActive: -1
 });
-const currentList = ref<FanItem[]>([]);
+const currentList = ref<T[]>([]) as Ref<T[]>;
 const activeFanIndex = ref(-1);
 /**
  * 打开扇面

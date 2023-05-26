@@ -93,7 +93,7 @@ const emit = defineEmits<{
 }>();
 
 //popover Ref
-const popoverRef = ref<PopoverInstance | null>(null);
+const popoverRef = ref<PopoverInstance | undefined>(null);
 /**
  * 手动关闭popover
  */
@@ -233,7 +233,7 @@ onBeforeMount(() => {
         v-slot="{ item }"
       >
         <!-- 单项容器的显示字段，默认field：value -->
-        <WyPopoverListItem
+        <wy-popover-list-item
           :item="item"
           :active-item-key="activeItemKey"
           @update="upDateResult"
@@ -244,7 +244,7 @@ onBeforeMount(() => {
         >
           <!-- 通过v-slot="list-item"可自定义每项选项内容 -->
           <slot name="list-item" :item="item"></slot>
-        </WyPopoverListItem>
+        </wy-popover-list-item>
       </RecycleScroller>
     </slot>
 

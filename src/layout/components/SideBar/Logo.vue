@@ -32,7 +32,7 @@ const sidebarTitleStyle = {
       to="/"
     >
       <!-- Logo -->
-      <WyIconFont
+      <wy-icon-font
         icon="icon-food-cookie"
         svg
         style="width: 35px; height: 35px"
@@ -42,14 +42,14 @@ const sidebarTitleStyle = {
     <!-- 展开状态有标题 -->
     <router-link v-else :title="title" class="sidebar-logo-link" to="/">
       <!-- Logo -->
-      <WyIconFont
+      <wy-icon-font
         icon="icon-food-cookie"
         svg
         style="width: 35px; height: 35px"
       />
       <!-- 标题 -->
-      <WyToolTip :text="title" :style="sidebarTitleStyle" multipleJudgments>
-      </WyToolTip>
+      <wy-toolTip :text="title" :style="sidebarTitleStyle" multipleJudgments>
+      </wy-toolTip>
     </router-link>
   </div>
 </template>

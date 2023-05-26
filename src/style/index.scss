@@ -53,3 +53,10 @@ a:hover {
 .wy-icon {
   outline: none;
 }
+
+/* 按钮样式 */
+body {
+  .wy-button-wave {
+    animation: wy-button-wave 1s linear;
+  }
+}

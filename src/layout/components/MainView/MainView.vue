@@ -14,7 +14,9 @@ const useRouterStore = routerStore();
 const cacheRouteList: ComputedRef<string[]> = computed(() =>
   useRouterStore.allAliveRoute.map(item => item.meta?.componentName)
 );
-const mainViewScrollBarRef = ref<InstanceType<typeof ElScrollbar>>(null);
+const mainViewScrollBarRef = ref<InstanceType<typeof ElScrollbar> | undefined>(
+  null
+);
 
 const route = useRoute();
 /* 监听路由改变，滚动条置顶 */

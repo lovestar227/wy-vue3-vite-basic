@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   multipleJudgments: false
 });
 //text Ref
-const textRef = ref<HTMLElement>(null);
+const textRef = ref<HTMLElement | undefined>(null);
 //是否显示tooltip
 const disabled = ref(true);
 //只判断一次是否需要显示toolTip

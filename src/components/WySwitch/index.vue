@@ -85,10 +85,10 @@ const circleStyle = computed(() => {
  */
 
 //button Ref
-const buttonRef = ref<HTMLElement>(null);
+const buttonRef = ref<HTMLElement | undefined>(null);
 
 //circle Ref
-const circleRef = ref<HTMLElement>(null);
+const circleRef = ref<HTMLElement | undefined>(null);
 
 /**
  * 开关切换

@@ -1,3 +1,1 @@
-import WyFan from "./index.vue";
-
-export { WyFan };
+export { default as WyFan } from "./index.vue";

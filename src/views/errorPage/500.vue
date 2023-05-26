@@ -7,11 +7,11 @@ defineOptions({
 <template>
   <div class="page-500" v-motion-fade>
     <div>
-      <WyIconFont
+      <wy-icon-font
         icon="icon-food-doughnut"
         svg
         class="icon-food-cake"
-      ></WyIconFont>
+      ></wy-icon-font>
     </div>
     <div class="middle-box">
       <span class="icon-500">{{ $t("page.500.pageError") }}</span>

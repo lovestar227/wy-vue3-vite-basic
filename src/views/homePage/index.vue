@@ -104,7 +104,7 @@ onMounted(() => {
 
 <template>
   <div class="home-page">
-    <WyFan :list="fanStatus" :default-active="1">
+    <wy-fan :list="fanStatus" :default-active="1">
       <!-- 关闭的扇面 -->
       <template v-slot:hide-fan="{ item, index, activeFanIndex, openFan }">
         <div class="fan-hide-item">
@@ -117,11 +117,11 @@ onMounted(() => {
               }
             "
           >
-            <WyIconFont
+            <wy-icon-font
               :icon="item.icon"
               svg
               class="open-btn-icon"
-            ></WyIconFont>
+            ></wy-icon-font>
           </div>
           <div class="fan-item-title">
             {{ item.title }}
@@ -160,7 +160,7 @@ onMounted(() => {
           :showFanBagImage="showFanBagImage"
         ></component>
       </template>
-    </WyFan>
+    </wy-fan>
   </div>
 </template>
 
