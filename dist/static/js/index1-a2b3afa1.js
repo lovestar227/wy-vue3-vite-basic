@@ -1,0 +1,1 @@
+import{f as n,o as a,B as s,D as t,J as o}from"./.pnpm-4cd026a8.js";const c={class:"menuPage3"},m=n({name:"Menu3",__name:"index1",setup(r){return(e,i)=>(a(),s("div",c,[t("h1",null,o(e.$t("page.menu.childMenu3")),1)]))}});export{m as default};
