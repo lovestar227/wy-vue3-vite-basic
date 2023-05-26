@@ -1,5 +1,15 @@
 export const logList = [
   {
+    version: "v1.1.3",
+    items: [
+      "1.feat: 新增组件wy-button，完全继承el-button，增加波浪效果属性wave",
+      "2.refactor: 重构通用组件的类型、使用改成小,写间隔'-'、WyFan使用generic",
+      "3.refactor: 修改WyToolTip文件名为WyTooltip",
+      "4.fix: wytooltip multipleJudgments 逻辑bug",
+      "5.fix: 网站标题从globalSetting.json取"
+    ]
+  },
+  {
     version: "v1.1.2",
     items: [
       "1.feat: 主题色应用-覆盖element plus 主题色",
