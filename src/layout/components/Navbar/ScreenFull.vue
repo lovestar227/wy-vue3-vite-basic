@@ -13,7 +13,7 @@ const {
 
 <template>
   <div class="screen-full-box">
-    <WyIconFont
+    <wy-icon-font
       :title="
         isFullscreen ? $t('buttons.exitFullScreen') : $t('buttons.fullScreen')
       "

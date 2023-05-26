@@ -300,10 +300,10 @@ function closeAllTag() {
                     :key="jtem.id"
                     @click="handleTagsOption(jtem.id, item.path)"
                   >
-                    <WyIconify
+                    <wy-iconify
                       :icon="jtem.icon"
                       class="dropdown-item-icon"
-                    ></WyIconify>
+                    ></wy-iconify>
                     <span>{{ $t(jtem.name) }}</span>
                   </el-dropdown-item>
                 </el-dropdown-menu>

@@ -38,8 +38,6 @@ const fullDeptStyle = {
   height: "20px",
   "lint-height": "20px"
 };
-
-const popoverRef = ref(null);
 </script>
 
 <template>
@@ -56,7 +54,7 @@ const popoverRef = ref(null);
       </template>
       <div class="w-200px">
         <h3>存储的值：{{ result1 }}</h3>
-        <WyPopoverList
+        <wy-popover-list
           :list="list2"
           v-model="result1"
           trigger="click"
@@ -65,7 +63,7 @@ const popoverRef = ref(null);
           valueField="value"
           :persistent="false"
         >
-        </WyPopoverList>
+        </wy-popover-list>
       </div>
     </el-card>
 
@@ -81,7 +79,7 @@ const popoverRef = ref(null);
       <div class="w-200px">
         <h3>存储的值：{{ result2 }}</h3>
         <div class="w-200px">
-          <WyPopoverList
+          <wy-popover-list
             :list="list1"
             v-model="result2"
             trigger="click"
@@ -93,7 +91,7 @@ const popoverRef = ref(null);
             valueField="save"
             showField="show"
           >
-          </WyPopoverList>
+          </wy-popover-list>
         </div>
       </div>
     </el-card>
@@ -107,7 +105,7 @@ const popoverRef = ref(null);
       <h3>存储的值：{{ result3 }}</h3>
       部门：
       <div class="w-200px inline-block">
-        <WyPopoverList
+        <wy-popover-list
           :list="list3"
           v-model="result3"
           list-class="auto-list"
@@ -140,7 +138,7 @@ const popoverRef = ref(null);
               {{ item.fullDept }}
             </div>
           </template>
-        </WyPopoverList>
+        </wy-popover-list>
       </div>
     </el-card>
 
@@ -149,7 +147,7 @@ const popoverRef = ref(null);
         <h3>当ElPopover使用</h3>
       </template>
       <div class="w-200px">
-        <WyPopoverList
+        <wy-popover-list
           trigger="hover"
           :width="200"
           placement="right"
@@ -160,7 +158,7 @@ const popoverRef = ref(null);
             <el-button> 悬浮我 </el-button>
           </template>
           你好
-        </WyPopoverList>
+        </wy-popover-list>
       </div>
     </el-card>
 
@@ -169,13 +167,12 @@ const popoverRef = ref(null);
         <h3>提供了内容的header、footer slot</h3>
       </template>
       <div class="w-200px">
-        <WyPopoverList
+        <wy-popover-list
           trigger="click"
           :width="200"
           placement="right"
           :persistent="false"
           :showSearch="false"
-          ref="popoverRef"
         >
           <template #reference>
             <el-button> 点击我 </el-button>
@@ -192,7 +189,7 @@ const popoverRef = ref(null);
             >
             <el-button class="float-right" @click="hidePopover">取消</el-button>
           </template>
-        </WyPopoverList>
+        </wy-popover-list>
       </div>
     </el-card>
   </div>

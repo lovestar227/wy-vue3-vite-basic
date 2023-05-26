@@ -44,7 +44,7 @@ function submit() {
   <div class="hooks-page">
     <el-card header="按钮自动loading Hook" class="hooks-card">
       <div class="hooks-card-body">
-        <el-button :loading="btnLoading" @click="submit">你好</el-button>
+        <wy-button :loading="btnLoading" @click="submit">你好</wy-button>
         <div class="api-result" v-if="apiResult">
           接口返回结果：{{ apiResult }}
         </div>

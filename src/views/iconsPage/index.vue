@@ -25,7 +25,7 @@ defineOptions({
         通过WyIconFont组件使用
         <span style="color: #aace5d">Symbol引用</span>
       </template>
-      <WyIconFont icon="icon-food-macaron" svg></WyIconFont>
+      <wy-icon-font icon="icon-food-macaron" svg></wy-icon-font>
     </el-card>
 
     <el-card class="hooks-card">
@@ -33,7 +33,7 @@ defineOptions({
         通过WyIconFont组件使用
         <span style="color: #aace5d">font-class引用</span>
       </template>
-      <WyIconFont icon="icon-quxiaoquanping" svg></WyIconFont>
+      <wy-icon-font icon="icon-quxiaoquanping" svg></wy-icon-font>
     </el-card>
 
     <h1>3.iconify图标使用</h1>
@@ -53,10 +53,10 @@ defineOptions({
           >(离线图标需要在WyIconify中添加图标)</span
         >
       </template>
-      <WyIconify
+      <wy-iconify
         icon="ep:grape"
         style="font-size: 100px; color: purple"
-      ></WyIconify>
+      ></wy-iconify>
     </el-card>
   </div>
 </template>

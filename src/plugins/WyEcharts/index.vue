@@ -64,11 +64,11 @@ onBeforeUnmount(() => {
   eChartInstance.value.dispose();
 });
 
-export interface WyEchartsAPI {
+export interface WyEchartsExpose {
   eChartInstance: ShallowRef<echarts.ECharts>;
 }
 
-defineExpose<WyEchartsAPI>({
+defineExpose<WyEchartsExpose>({
   //expose echarts实例
   eChartInstance: eChartInstance
 });

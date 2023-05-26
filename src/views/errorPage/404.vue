@@ -7,7 +7,11 @@ defineOptions({
 <template>
   <div class="page-404" v-motion-fade>
     <div>
-      <WyIconFont icon="icon-food-cake" svg class="icon-food-cake"></WyIconFont>
+      <wy-icon-font
+        icon="icon-food-cake"
+        svg
+        class="icon-food-cake"
+      ></wy-icon-font>
     </div>
     <div class="middle-box">
       <span class="icon-404">{{ $t("page.404.pageLoss") }}</span>

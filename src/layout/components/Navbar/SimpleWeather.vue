@@ -57,7 +57,7 @@ let lifeIndex: Suggestion[] = [];
 //生活指数（4个）
 const lifeData = ref<lifeItem[][]>([]);
 //weather popover ref
-const weatherPopoverRef = ref<InstanceType<typeof ElPopover>>();
+const weatherPopoverRef = ref<InstanceType<typeof ElPopover> | undefined>();
 /**
  * 获取实时天气
  * @param location 查询位置
@@ -184,7 +184,7 @@ onMounted(() => {
   <div class="simple-weather" v-if="temperature">
     <!-- 获取天气loading -->
     <div class="weather-loading" v-if="weatherLoading">
-      <WyIconFont icon="icon-loading" svg class="loading-rotate" />
+      <wy-icon-font icon="icon-loading" svg class="loading-rotate" />
       获取天气中
     </div>
     <!-- 天气 -->
@@ -333,7 +333,7 @@ onMounted(() => {
             >
               <el-col :span="12" v-for="life in col" :key="life.id">
                 <div class="weather-life-item">
-                  <WyIconFont
+                  <wy-icon-font
                     :icon="life.icon"
                     svg
                     style="width: 35px; height: 35px"

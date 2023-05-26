@@ -8,7 +8,7 @@
 import { nextTick, ref, withDefaults } from "vue";
 
 defineOptions({
-  name: "WyToolTip",
+  name: "WyTooltip",
   //禁用默认的组件 attribute 透传行为
   inheritAttrs: false
 });
@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   multipleJudgments: false
 });
 //text Ref
-const textRef = ref<HTMLElement>(null);
+const textRef = ref<HTMLElement | undefined>(null);
 //是否显示tooltip
 const disabled = ref(true);
 //只判断一次是否需要显示toolTip
@@ -32,7 +32,7 @@ const onlyOnce = ref(false);
 /* 菜单hover判断文本是否溢出来控制tooltip的显示 */
 function hoverMenu() {
   //是否只判断一次是否显示tooltip
-  if (onlyOnce.value || props.multipleJudgments) return;
+  if (onlyOnce.value && !props.multipleJudgments) return;
 
   nextTick(() => {
     const spanDom = textRef.value;

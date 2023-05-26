@@ -2,7 +2,7 @@
 import { DatasetOption } from "echarts/types/dist/shared";
 import { debounce } from "lodash-unified";
 
-import WyEcharts, { WyEchartsAPI } from "/@/plugins/WyEcharts/index.vue";
+import WyEcharts, { WyEchartsExpose } from "/@/plugins/WyEcharts/index.vue";
 
 import gradientStackedAreaOption from "./charts/gradientStackedAreaChart";
 import lineAndPieOption from "./charts/lineAndPieChart";
@@ -14,9 +14,9 @@ defineOptions({
 });
 
 /* 图表 ref */
-const gradientStackedAreaChart = ref<WyEchartsAPI | undefined>(null);
-const temperatureChartRef = ref<WyEchartsAPI | undefined>(null);
-const lineAndPieChartRef = ref<WyEchartsAPI | undefined>(null);
+const gradientStackedAreaChart = ref<WyEchartsExpose | undefined>(null);
+const temperatureChartRef = ref<WyEchartsExpose | undefined>(null);
+const lineAndPieChartRef = ref<WyEchartsExpose | undefined>(null);
 
 /* 联动和共享数据集 */
 const lineAndPieSorce = [
@@ -117,9 +117,9 @@ onMounted(() => {
                   :value="item.value"
                 />
               </el-select>
-              <el-button @click="updatePercentOptions" type="primary">
+              <wy-button @click="updatePercentOptions" type="primary" wave>
                 换一组数据
-              </el-button>
+              </wy-button>
             </div>
           </div>
         </template>

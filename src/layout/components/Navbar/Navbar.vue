@@ -92,16 +92,16 @@ const getOpenBtnStyle = {
       <!-- 国际化 -->
       <el-dropdown trigger="click" class="toogle-locale">
         <span>
-          <WyIconFont
+          <wy-icon-font
             icon="icon-zhongyingwenqiehuan-yingwen"
             class="toogle-locale-icon"
             v-if="locale === 'en'"
-          ></WyIconFont>
-          <WyIconFont
+          ></wy-icon-font>
+          <wy-icon-font
             icon="icon-zhongyingwenqiehuan-zhongwen"
             class="toogle-locale-icon"
             v-if="locale === 'zh-CN'"
-          ></WyIconFont>
+          ></wy-icon-font>
         </span>
         <template #dropdown>
           <el-dropdown-menu class="translate">
@@ -134,7 +134,7 @@ const getOpenBtnStyle = {
       </el-dropdown>
 
       <!-- 切换明暗模式 -->
-      <WyDarkToogle v-if="showDarkToogle"></WyDarkToogle>
+      <wy-dark-toogle v-if="showDarkToogle"></wy-dark-toogle>
 
       <!-- 用户 -->
       <el-dropdown trigger="click">

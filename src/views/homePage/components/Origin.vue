@@ -18,12 +18,12 @@ const props = withDefaults(defineProps<Props>(), {});
     <!-- 头部 -->
     <header class="open-fan-header">
       <div class="open-fan-header-left">
-        <WyIconFont
+        <wy-icon-font
           :icon="props.item.icon"
           svg
           class="open-fan-header-icon"
           v-motion-fade
-        ></WyIconFont>
+        ></wy-icon-font>
         <span>{{ props.item.title }}</span>
       </div>
       <div class="open-fan-header-right">
