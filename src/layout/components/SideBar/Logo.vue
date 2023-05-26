@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { settingStore } from "/@/store/modules/settings";
+
 defineOptions({
   name: "Logo"
 });
@@ -9,7 +11,7 @@ const props = defineProps({
 /**
  * 标题
  */
-const title = "WYJSSSSSSSSSSSSSSSSSSS";
+const title = computed(() => settingStore().title);
 /**
  * 标题样式
  */
