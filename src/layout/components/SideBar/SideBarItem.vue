@@ -57,12 +57,12 @@ const getNoDropdownStyle = computed((): CSSProperties => {
         <wy-iconify :icon="props.item.meta?.icon" />
       </div>
       <!-- 内容 -->
-      <wy-toolTip>
+      <wy-tooltip>
         <template #content>
           {{ $t(props.item.meta.title) }}
         </template>
         {{ $t(props.item.meta.title) }}
-      </wy-toolTip>
+      </wy-tooltip>
     </template>
     <!-- 子菜单 -->
     <side-bar-item
