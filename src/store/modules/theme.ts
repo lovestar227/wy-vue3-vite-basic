@@ -3,7 +3,6 @@
  */
 import { defineStore } from "pinia";
 
-import { getConfig } from "/@/config";
 import { themeStoreType } from "/@/types/store";
 import { storageLocal } from "/@/utils/index";
 
@@ -13,7 +12,7 @@ export const themeStore = defineStore({
   id: "Theme",
   state: (): themeStoreType => ({
     //系统主题色
-    themeColor: getThemeColorFromStorageLocal() ?? getConfig().themeColor
+    themeColor: getThemeColorFromStorageLocal()
   }),
   getters: {
     /**
